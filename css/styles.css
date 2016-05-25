@@ -1,0 +1,45 @@
+html {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+body {
+  background-color:#222;
+}
+.card {
+	float: left;
+	width: 50%;
+	padding: .5rem;
+}
+.card > img {
+	position: relative;
+	padding: .25rem;
+	margin: 0 0 0 30%;
+}
+
+
+
+/* 
+ Extra small devices (portrait phones, less than 34em)
+ No media query since this is the default in Bootstrap
+
+ Small devices (landscape phones, 34em and up)
+ */
+
+/*@media (min-width: 34em) { 	
+}*/
+
+/*Medium devices (tablets, 48em and up)*/
+
+/*@media (min-width: 48em) { 
+}*/
+
+/*Large devices (desktops, 62em and up)*/
+
+/*@media (min-width: 62em) { 	
+}*/
+
+/*Extra large devices (large desktops, 75em and up)*/
+
+/*@media (min-width: 75em) { 	
+}*/
