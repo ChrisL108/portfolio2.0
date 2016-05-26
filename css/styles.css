@@ -1,22 +1,29 @@
-html {
+html, body {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
+	background-color:#444;
 }
-body {
-  background-color:#222;
+nav {
+	margin: 0;
+	padding: 0;
 }
-.card {
-	float: left;
-	width: 50%;
-	padding: .5rem;
+.navbar-toggler {
+	border: 1px solid gray;
+	margin-top: .8rem;
 }
-.card > img {
+.jumbotron {
+	background-image: url(../img/space.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 450px;
+}
+#astronaut {
 	position: relative;
-	padding: .25rem;
-	margin: 0 0 0 30%;
+	top: 0;
+	left: 0;
+	width: 100px;
 }
-
 
 
 /* 

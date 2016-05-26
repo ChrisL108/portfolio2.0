@@ -8,6 +8,9 @@
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
 </head>
 <body>
 
@@ -15,16 +18,24 @@
 <nav>
     <div class="collapse" id="navbar-header">
       <div class="container-fluid bg-inverse p-a-1">
-        <h3>Collapsed content</h3>
-        <p>Toggleable via the navbar brand.</p>
+        <h3>Chris LaCaille</h3>
+        <p>chrislacaille5@gmail.com</p>
       </div>
     </div>
-    <div class="navbar navbar-light bg-faded navbar-static-top m-b-1">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
-        &#9776;
-      </button>
+    <!-- Collapsable Header -->
+    <div class="navbar navbar-dark bg-inverse navbar-static-top">
+    	<img class="navbar-brand" src="img/source-logo.png" width="100">
+    	<!-- person icon  -->
+        <i class="fa fa-user fa-lg navbar-toggler btn pull-right" type="button" data-toggle="collapse" data-target="#navbar-header" aria-hidden="true"></i>
     </div>
 </nav>
+
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid center-block">
+	<div class="container-fluid">
+		<img id="astronaut" src="img/astronaut-cutout.png" alt="astronaut floating around">]
+	</div>
+</div>
 
 
 
@@ -47,6 +58,8 @@
 
 
 <script src="js/jquery-2.2.4.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 </body>
