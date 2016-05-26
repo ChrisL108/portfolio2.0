@@ -1,5 +1,6 @@
 html, body {
 	font-size: 16px;
+	/*font-family: 'Orbitron', sans-serif;*/
 	margin: 0;
 	padding: 0;
 	background-color:#444;
@@ -12,35 +13,46 @@ nav {
 	border: 1px solid gray;
 	margin-top: .8rem;
 }
+nav, .jumbotron {
+	font-family: 'Orbitron', sans-serif;
+}
 .jumbotron {
-	background-image: url(../img/space.jpg);
+	/*background-image: url(../img/space.jpg);*/
+	background-image: url(https://www.dropbox.com/s/7lfujkhzqug58z4/space.jpg?raw=1);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 600px;
 }
-/*Spin animation for astronaut*/
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  30% {
-    transform: rotate(20deg);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
+
+
+.jumbotron:hover {
+	cursor: url(../img/blackhole.png);
 }
+
+
 #astronaut {
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 150px;
-	-webkit-animation: spin 5s infinite; /* Safari 4+ */
-	-moz-animation:    spin 5s infinite; /* Fx 5+ */
-	-o-animation:      spin 5s infinite; /* Opera 12+ */
-	animation:         spin 5s infinite alternate; /* IE 10+, Fx 29+ */
+	-webkit-animation: spin 8s infinite alternate; 
+	-moz-animation:    spin 8s infinite alternate; 
+	-o-animation:      spin 8s infinite alternate; 
+	animation:         spin 8s infinite alternate; 
 }
 
+/* SPINNING ANIMATION for astronaut*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(50deg) ;
+  }
+} translateX(50px) translateY(50px)
 
 
 
