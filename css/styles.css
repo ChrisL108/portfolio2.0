@@ -17,8 +17,8 @@ nav, .jumbotron {
 	font-family: 'Orbitron', sans-serif;
 }
 .jumbotron {
-	/*background-image: url(../img/space.jpg);*/
-	background-image: url(https://www.dropbox.com/s/7lfujkhzqug58z4/space.jpg?raw=1);
+	background-image: url(../img/space.jpg);
+	/*background-image: url(https://www.dropbox.com/s/7lfujkhzqug58z4/space.jpg?raw=1);*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 600px;
