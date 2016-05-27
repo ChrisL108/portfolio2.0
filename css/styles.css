@@ -52,7 +52,8 @@ nav, .jumbotron {
   100% {
     transform: rotate(50deg) ;
   }
-} translateX(50px) translateY(50px)
+} 
+/*translateX(50px) translateY(50px)*/
 
 
 

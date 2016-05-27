@@ -1,25 +1,35 @@
 $(function(){ 
 	
-	var $astronaut = $("#astronaut"), // astronaught is 150px wide
-		$astronautHeight = $astronaut.height(),
-		$astronautWidth = $astronaut.width(),
-		$jumbotron = $(".jumbotron"),
-		$jumbotronHeight = $jumbotron.height(),
-		$jumbotronWidth = $jumbotron.width(),
-		$window = $(window);
+	// var $astronaut = $("#astronaut"), // astronaught is 150px wide
+	// 	$astronautHeight = $astronaut.height(),
+	// 	$astronautWidth = $astronaut.width(),
+	// 	$jumbotron = $(".jumbotron"),
+	// 	$jumbotronHeight = $jumbotron.height(),
+	// 	$jumbotronWidth = $jumbotron.width(),
+	// 	$window = $(window);
 
-console.log($astronautWidth);
 
-	$jumbotron.on("mouseover click touch",  function(e) {
-		var newLeft = Math.random() * ($jumbotronWidth - $astronautWidth),
-			newTop = Math.random() * ($jumbotronHeight - $astronautHeight);
+// var $astronaut = $("#astronaut");
 
-		$("#astronaut").stop(true).animate({
-			left: e.pageX - 80 ,
-			top: e.pageY - 250
-		}, 2000);
 
-	});
+var astronaut = $("#astronaut");
+var mouseX = 0, mouseY = 0;
+
+$(".jumbotron").mousemove(function(e){
+   mouseX = e.pageX;
+   mouseY = e.pageY - 450; 
+});
+
+// cache the selector
+
+var xp = 0, yp = 0;
+var loop = setInterval(function(){
+    // change 12 to alter damping higher is slower
+    xp += (mouseX - xp) / 12;
+    yp += (mouseY - yp) / 12;
+    astronaut.css({left:xp, top:yp});
+    
+}, 30);
 
 
 });
