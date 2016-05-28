@@ -16,8 +16,8 @@ var astronaut = $("#astronaut");
 var mouseX = 0, mouseY = 0;
 
 $(".jumbotron").mousemove(function(e){
-   mouseX = e.pageX;
-   mouseY = e.pageY - 450; 
+   mouseX = e.pageX - 300;
+   mouseY = e.pageY - 350; 
 });
 
 // cache the selector
@@ -25,8 +25,8 @@ $(".jumbotron").mousemove(function(e){
 var xp = 0, yp = 0;
 var loop = setInterval(function(){
     // change 12 to alter damping higher is slower
-    xp += (mouseX - xp) / 15;
-    yp += (mouseY - yp) / 15;
+    xp += (mouseX - xp) / 30;
+    yp += (mouseY - yp) / 30;
     astronaut.css({left:xp, top:yp});
     
 }, 50);
