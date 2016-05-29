@@ -1,49 +1,77 @@
 
 
-let $astronaut = $("#astronaut");
+// let $astronaut = $("#astronaut");
 
-let jumboOffset = $('.jumbotron').offset();
+// let jumboOffset = $('.jumbotron').offset();
 
-let relX = relY = 0;
+// let relX = relY = 0;
 
 
-$(function(){ 
+// $(document).ready(function(){ 
 	
-let frames = 30;   // 30 frames per second
-let timeInterval = Math.round( 1000 / frames );
+// 	let frames = 30;   // 30 frames per second
+// 	let timeInterval = Math.round( 1000 / frames );
 
-setInterval(updateAstronautPos(), timeInterval);
+// 	animateTimer = setInterval(updateAstronautPos(), timeInterval);
 
- });  // end doc ready
+// });  // end doc ready
 
 
-$(".jumbotron").on('click',function(e){
-	var mouseX = e.pageX;
-	var mouseY = e.pageY;
-	var relX = mouseX - jumboOffset.left;
-	var relY = mouseY - jumboOffset.top;
+// $(".jumbotron").on('click',function(e){
+// 	var mouseX = e.pageX;
+// 	var mouseY = e.pageY;
+// 	var relX = mouseX - jumboOffset.left;
+// 	var relY = mouseY - jumboOffset.top;
+// });
+
+// function updateAstronautPos() {
+//   $astronaut.css('left', relX);
+//   $astronaut.css('top', relY);
+// }
+
+
+$(function() {
+
+
+// ASTRONAUT ANIMATION
+var astronaut = $("#astronaut");
+var mouseX = 0, mouseY = 0;
+var xp = 0, yp = 0;
+
+$(".jumbotron").mousemove(function(e){
+   mouseX = e.pageX ;
+   mouseY = e.pageY - 50; 
 });
 
-function updateAstronautPos() {
-  $astronaut.css('left', relX);
-  $astronaut.css('top', relY);
-}
+// Loop over astronaut Tween animation
+// setInterval & Tween ( or css() ) is smoother than jQuery's animation()
+var loop = setInterval(function(){
+	// Damper on 15 .. can change ... higher is slower
+    	xp += (mouseX - xp) / 15;
+		yp += (mouseY - yp) / 15;
+
+	    if ( xp > 50 && xp < ($(window).width() - 100) && yp > 0 && yp < 460) {
+	    	TweenLite.to(astronaut, 1.5, {
+	    				 left:xp, top:yp, 
+	    				 opacity: 1} );
+	    } else {
+	    	TweenLite.to(astronaut, 0.5, {
+	    				left:xp, top:yp,
+	    				opacity: 0 } );
+	    }
+}, 33);
 
 
+// SKILLS SECTION
 
-// var astronaut = $("#astronaut");
-// var mouseX = 0, mouseY = 0;
-// $('.jumbotron').offset().top - 
-
-// $(".jumbotron").mousemove(function(e){
-//    mouseX = e.pageX - 300;
-//    mouseY = e.pageY - 350; 
+// $("#skills-section").on('hover', function() {
+// 	 // Tween.to(skillsSection, 1, {backgroundColor: black});
+// 	TweenLite.to($("#skills-section > img"), 1, {width:100, ease:"Elastic.easeOut"});
+// }, function() {
+// 	/* Stuff to do when the mouse leaves the element */
 // });
-// // cache the selector
-// var xp = 0, yp = 0;
-// var loop = setInterval(function(){
-//     // change 12 to alter damping higher is slower
-// 	    xp += (mouseX - xp) / 20;
-// 	    yp += (mouseY - yp) / 20;
-// 	    astronaut.css({left:xp, top:yp});
-// }, 70);
+
+
+});   // end ready function
+
+
