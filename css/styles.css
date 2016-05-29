@@ -76,6 +76,10 @@ nav, .jumbotron {
 #javascript {
 	float: left;
 }
+.progress[value] {
+	color: #FF6338 !important;
+	border: 1px solid orange;
+}
 
 /* 
  Extra small devices (portrait phones, less than 34em)

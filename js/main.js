@@ -55,7 +55,7 @@ var loop = setInterval(function(){
 	    				 left:xp, top:yp, 
 	    				 opacity: 1} );
 	    } else {
-	    	TweenLite.to(astronaut, 0.5, {
+	    	TweenLite.to(astronaut, 1, {
 	    				left:xp, top:yp,
 	    				opacity: 0 } );
 	    }
