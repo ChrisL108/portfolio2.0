@@ -1,35 +1,49 @@
+
+
+let $astronaut = $("#astronaut");
+
+let jumboOffset = $('.jumbotron').offset();
+
+let relX = relY = 0;
+
+
 $(function(){ 
 	
-	// var $astronaut = $("#astronaut"), // astronaught is 150px wide
-	// 	$astronautHeight = $astronaut.height(),
-	// 	$astronautWidth = $astronaut.width(),
-	// 	$jumbotron = $(".jumbotron"),
-	// 	$jumbotronHeight = $jumbotron.height(),
-	// 	$jumbotronWidth = $jumbotron.width(),
-	// 	$window = $(window);
+let frames = 30;   // 30 frames per second
+let timeInterval = Math.round( 1000 / frames );
+
+setInterval(updateAstronautPos(), timeInterval);
+
+ });  // end doc ready
 
 
-// var $astronaut = $("#astronaut");
-
-
-var astronaut = $("#astronaut");
-var mouseX = 0, mouseY = 0;
-
-$(".jumbotron").mousemove(function(e){
-   mouseX = e.pageX - 300;
-   mouseY = e.pageY - 350; 
+$(".jumbotron").on('click',function(e){
+	var mouseX = e.pageX;
+	var mouseY = e.pageY;
+	var relX = mouseX - jumboOffset.left;
+	var relY = mouseY - jumboOffset.top;
 });
 
-// cache the selector
-
-var xp = 0, yp = 0;
-var loop = setInterval(function(){
-    // change 12 to alter damping higher is slower
-    xp += (mouseX - xp) / 30;
-    yp += (mouseY - yp) / 30;
-    astronaut.css({left:xp, top:yp});
-    
-}, 50);
+function updateAstronautPos() {
+  $astronaut.css('left', relX);
+  $astronaut.css('top', relY);
+}
 
 
-});
+
+// var astronaut = $("#astronaut");
+// var mouseX = 0, mouseY = 0;
+// $('.jumbotron').offset().top - 
+
+// $(".jumbotron").mousemove(function(e){
+//    mouseX = e.pageX - 300;
+//    mouseY = e.pageY - 350; 
+// });
+// // cache the selector
+// var xp = 0, yp = 0;
+// var loop = setInterval(function(){
+//     // change 12 to alter damping higher is slower
+// 	    xp += (mouseX - xp) / 20;
+// 	    yp += (mouseY - yp) / 20;
+// 	    astronaut.css({left:xp, top:yp});
+// }, 70);
