@@ -50,7 +50,7 @@ var loop = setInterval(function(){
     	xp += (mouseX - xp) / 15;
 		yp += (mouseY - yp) / 15;
 
-	    if ( xp > 50 && xp < ($(window).width() - 100) && yp > 0 && yp < 460) {
+	    if ( xp > 50 && xp < ($(window).width() - 150) && yp > 0 && yp < 460) {
 	    	TweenLite.to(astronaut, 1.5, {
 	    				 left:xp, top:yp, 
 	    				 opacity: 1} );
@@ -64,12 +64,12 @@ var loop = setInterval(function(){
 
 // SKILLS SECTION
 
-// $("#skills-section").on('hover', function() {
-// 	 // Tween.to(skillsSection, 1, {backgroundColor: black});
-// 	TweenLite.to($("#skills-section > img"), 1, {width:100, ease:"Elastic.easeOut"});
-// }, function() {
-// 	/* Stuff to do when the mouse leaves the element */
-// });
+$("#skills-section").on('hover', function() {
+	 // Tween.to(skillsSection, 1, {backgroundColor: black});
+	TweenLite.to($("#skills-section > img"), 1, {width:100, ease:"Elastic.easeOut"});
+}, function() {
+	/* Stuff to do when the mouse leaves the element */
+});
 
 
 });   // end ready function

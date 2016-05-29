@@ -64,16 +64,18 @@ nav, .jumbotron {
 } 
 
 .progress {
-	height: 1.7rem;
-}
-#javascript {
-	float:left;
-	margin-left: 45%;
+	height: 1.5rem;
 }
 #html {
-	margin-left:10%;float:left;
+	margin-left: 70%;
 }
-
+#css {
+	float: left;
+	margin-left: 45%;
+}
+#javascript {
+	float: left;
+}
 
 /* 
  Extra small devices (portrait phones, less than 34em)
