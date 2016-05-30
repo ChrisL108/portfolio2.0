@@ -35,8 +35,7 @@ $(function() {
 
 // ASTRONAUT ANIMATION
 var astronaut = $("#astronaut");
-var mouseX = 0, mouseY = 0;
-var xp = 0, yp = 0;
+var mouseX = mouseY = xp = yp = 0;
 
 $(".jumbotron").mousemove(function(e){
    mouseX = e.pageX ;
