@@ -63,14 +63,21 @@ var loop = setInterval(function(){
 
 // SKILLS SECTION
 
-$("#skills-section").on('hover', function() {
-	 // Tween.to(skillsSection, 1, {backgroundColor: black});
-	TweenLite.to($("#skills-section > img"), 1, {width:100, ease:"Elastic.easeOut"});
+$(window).on('scroll', function() {
+	console.log("This isn't displaying");
 }, function() {
-	/* Stuff to do when the mouse leaves the element */
+	console.log("This IS displaying?");
 });
 
 
 });   // end ready function
 
 
+
+
+
+	// $("progress").animate({
+	// 	value: '80',
+	// 	borderColor: 'white'
+	// });
+	// console.log("callback");
