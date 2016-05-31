@@ -1,5 +1,14 @@
 
+
 $(function() {
+
+
+// $("#site-title").blast({delimeter: "character"});
+
+// $("#site-title").on("hover", ".blast", function() {
+// 	// TweenLite.to(this, 1, {marginBottom:"5px"});
+// 	console.log("hovering");
+// });
 
 // Astronaut animation
 var astronaut = $("#astronaut"), $window = $(window);
@@ -37,23 +46,14 @@ progressText.hide();
 $window.on('scroll', function() {
 	if ( $window.scrollTop() > $skills.offset().top -
 									( $skills.height() / 2 )  ){
-		$(".progress:eq(0)").animate({ value: '92' }, 1000); //JS
-		$(".progress:eq(1)").animate({ value: '83' }, 2000); //HTML
-		$(".progress:eq(2)").animate({ value: '68' }, 3000); //CSS
-		$(".progress:eq(3)").animate({ value: '75' }, 4000); //etc
-		progressText.fadeIn();
+		$(".progress:eq(0)").animate({ value: '92' }, 1000); // JS
+		$(".progress:eq(1)").animate({ value: '83' }, 2000); // HTML
+		$(".progress:eq(2)").animate({ value: '68' }, 3000); // CSS
+		$(".progress:eq(3)").animate({ value: '75' }, 4000); // etc
+		progressText.fadeIn('slow');
 	}
 });
 
-
-
-// animate by letter?
-// var titles = $("#what-i-do h4");
-// for (var i=0; i< titles.length; i++ ) {
-// 	for (var j = 0; j < titles[i].length ; j++ ) {
-// 		console.log(titles[i][j].val());
-// 	}
-// }
 
 
 });   // end ready function

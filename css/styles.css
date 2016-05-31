@@ -10,6 +10,11 @@ nav {
 	margin: 0;
 	padding: 0;
 }
+/* Font for nav and jumbotron */
+nav, .jumbotron {
+	font-family: 'Orbitron', sans-serif;
+}
+ /* Navbar collapsable-content button */
 .navbar-toggler {
 	border: 1px solid #A6AFB9;
 	margin-top: .8rem;
@@ -18,19 +23,16 @@ nav {
 	border: 1.5px solid gray;
 	color:gray;
 }
-
-nav, .jumbotron {
-	font-family: 'Orbitron', sans-serif;
-}
+/* Logo */
 .navbar-brand {
 	position: relative;
 	margin: 0 auto;
 }
+
 /* Jumbotron */
 .jumbotron {
 	position: relative;
 	background-image: url(../img/space2.jpg);
-	/*background-image: url(https://www.dropbox.com/s/7lfujkhzqug58z4/space.jpg?raw=1);*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 600px;
@@ -50,30 +52,30 @@ nav, .jumbotron {
 	-o-animation:      spin 8s infinite alternate; 
 	animation:         spin 8s infinite alternate; 
 }
+/* jumbotron call-to-action */
 #my-work-jumbo {
 	position: relative;
-	width: 20rem;
-	/*bottom: 0;*/
 	margin: 0 auto;
-	margin-top: 12rem;
-/*	background-color: gray;
-	opacity: 0.6;
-	filter: alpha(opacity:60);*/
+	margin-top: 25%;
 }
-#my-work-jumbo button,#my-work-jumbo i {
+#my-work-jumbo button {
 	display: block;
 	opacity: 1;
 	text-align: center;
 	margin: 0 auto;
+	opacity: 0.6;
+	filter: alpha(opacity:60);
+}
+#my-work-jumbo button:hover {
+	opacity: 1;
+	filter: alpha(opacity:100);
 }
 
-/* What I Do */
+/* What-I-Do Section */
 #what-i-do {
 	padding: 10px;
 	color: gray;
-	/*background: radial-gradient(white, transparent, white);*/
-    background: linear-gradient( 0deg, #0B1320, #000000, #404D58 );   
-	/*background: linear-gradient( 0deg, #4E4E4E, gray, white );*/
+    background: linear-gradient( 0deg, #0B1320, #000000, #404D58 ); 
 }
 #what-i-do .col-md-4 {
 	padding: 1.5rem;
@@ -83,7 +85,7 @@ nav, .jumbotron {
 	font-weight: bolder;
 }
 
-/* skills */
+/* Skills Section */
 #skills-section {
 	background-image: url(../img/patterns/abstract.png);
 	background-repeat: repeat;
@@ -98,8 +100,8 @@ nav, .jumbotron {
 	box-shadow: 10px 10px 50px rgba(5,5,5,0.8);
 	border: 1px solid rgba(1, 1, 5, 0.2);
 }
+
 /* Progress Bars */
-/*#4E4E4E dark gray */
 .progress {
 	height: 1.5rem;
 	margin: 3rem auto;
@@ -114,6 +116,7 @@ nav, .jumbotron {
 	position: relative; 
 	top: -5.3rem; 
 }
+
 /* spin keyframes for astronaut */
 @keyframes spin {
   0% {
