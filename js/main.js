@@ -1,10 +1,8 @@
 
 $(function() {
 
-
-// ASTRONAUT ANIMATION
-var astronaut = $("#astronaut");
-var $window = $(window);
+// Astronaut animation
+var astronaut = $("#astronaut"), $window = $(window);
 var mouseX = mouseY = xp = yp = 0;
 
 $(".jumbotron").mousemove(function(e){
@@ -32,7 +30,10 @@ var loop = setInterval(function(){
 
 
 // SKILLS SECTION
-$skills = $("#skills-section");
+var $skills = $("#skills-section"),
+	progressText = $(".progress-text");
+progressText.hide();
+
 $window.on('scroll', function() {
 	if ( $window.scrollTop() > $skills.offset().top -
 									( $skills.height() / 2 )  ){
@@ -44,11 +45,7 @@ $window.on('scroll', function() {
 	}
 });
 
-var progressText = $(".progress-text");
-var showText = function() {
-	progressText.fadeIn('slow');
-}
-progressText.hide();
+
 
 // animate by letter?
 // var titles = $("#what-i-do h4");

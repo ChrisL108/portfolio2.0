@@ -50,6 +50,22 @@ nav, .jumbotron {
 	-o-animation:      spin 8s infinite alternate; 
 	animation:         spin 8s infinite alternate; 
 }
+#my-work-jumbo {
+	position: relative;
+	width: 20rem;
+	/*bottom: 0;*/
+	margin: 0 auto;
+	margin-top: 12rem;
+/*	background-color: gray;
+	opacity: 0.6;
+	filter: alpha(opacity:60);*/
+}
+#my-work-jumbo button,#my-work-jumbo i {
+	display: block;
+	opacity: 1;
+	text-align: center;
+	margin: 0 auto;
+}
 
 /* What I Do */
 #what-i-do {
