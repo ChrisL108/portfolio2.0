@@ -15,7 +15,7 @@ nav {
 	margin-top: .8rem;
 }
 .navbar-toggler:hover {
-	border: 1.5px solid white;
+	border: 1.5px solid gray;
 	color:gray;
 }
 
@@ -24,20 +24,20 @@ nav, .jumbotron {
 }
 .navbar-brand {
 	position: relative;
-	margin:0 auto;
+	margin: 0 auto;
 }
 .jumbotron {
 	position: relative;
-	background-image: url(../img/space.jpg);
+	background-image: url(../img/space2.jpg);
 	/*background-image: url(https://www.dropbox.com/s/7lfujkhzqug58z4/space.jpg?raw=1);*/
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 600px;
+	margin-bottom: 0;
+	border-bottom: 2px solid #4E4E4E;
 }
-
-
-.jumbotron:hover {
-	cursor: url('../img/blackhole.png');
+.jumbotron h1 {
+	text-shadow: 2px 1px #F4AD4E;
 }
 #astronaut {
 	position: absolute;
@@ -61,46 +61,40 @@ nav, .jumbotron {
   100% {
     transform: rotate(50deg) ;
   }
-} 
+}
+/* SKILLS */
+#skills-section {
+	background-image: url(../img/patterns/abstract.png);
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-top: 10px;
+}
+#skills-section img {
+	padding: 0.2rem;
+	margin: 0 auto;
+	-webkit-box-shadow: 10px 10px 50px rgba(5,5,5,0.8);
+	box-shadow: 10px 10px 50px rgba(5,5,5,0.8);
+	border: 1px solid rgba(1, 1, 5, 0.8);
+}
+#skills-section img:hover {
+	border: 1px solid gray;
+
+}
+/* Progress Bars */
 /*#4E4E4E dark gray */
 .progress {
 	height: 1.5rem;
-	margin: 4rem auto;
-}
-#html {
-	position: absolute;
-	left:62%;
-	margin-top: -3rem;
-}
-#css {
-	position: absolute;
-	left: 47%;
-	margin-top: 2rem;
-}
-#javascript {
-	position: absolute;
-	left: 65%;
-	margin-top: 8rem;
-}	
-#bottom-skills {
-	left: 10%;
-	margin-top: -2rem;
-}
-#bottom-skills > .progress {
-	margin-top: 6.5rem;
-}
-#github, #bootstrap, #jquery {
-	float: left;
-	display: inline-block;
-	margin-top: -4rem;
+	margin: 3rem auto;
 }
 .progress[value] {
-	color: #FF6338 !important;
-	border: 1px solid orange;
+	/*progress bar data*/
 }
 
  
-/* Extra small devices (portrait phones, less than 34em)
+/* MEDIA QUERIES
+
+ Extra small devices (portrait phones, less than 34em)
  No media query since this is the default in Bootstrap
 
  Small devices (landscape phones, 34em and up)

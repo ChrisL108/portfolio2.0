@@ -1,40 +1,10 @@
 
-
-// let $astronaut = $("#astronaut");
-
-// let jumboOffset = $('.jumbotron').offset();
-
-// let relX = relY = 0;
-
-
-// $(document).ready(function(){ 
-	
-// 	let frames = 30;   // 30 frames per second
-// 	let timeInterval = Math.round( 1000 / frames );
-
-// 	animateTimer = setInterval(updateAstronautPos(), timeInterval);
-
-// });  // end doc ready
-
-
-// $(".jumbotron").on('click',function(e){
-// 	var mouseX = e.pageX;
-// 	var mouseY = e.pageY;
-// 	var relX = mouseX - jumboOffset.left;
-// 	var relY = mouseY - jumboOffset.top;
-// });
-
-// function updateAstronautPos() {
-//   $astronaut.css('left', relX);
-//   $astronaut.css('top', relY);
-// }
-
-
 $(function() {
 
 
 // ASTRONAUT ANIMATION
 var astronaut = $("#astronaut");
+var $window = $(window);
 var mouseX = mouseY = xp = yp = 0;
 
 $(".jumbotron").mousemove(function(e){
@@ -49,7 +19,7 @@ var loop = setInterval(function(){
     	xp += (mouseX - xp) / 15;
 		yp += (mouseY - yp) / 15;
 
-	    if ( xp > 50 && xp < ($(window).width() - 150) && yp > 0 && yp < 460) {
+	    if ( xp > 50 && xp < ($window.width() - 150) && yp > 0 && yp < 460) {
 	    	TweenLite.to(astronaut, 1.5, {
 	    				 left:xp, top:yp, 
 	    				 opacity: 1} );
@@ -62,11 +32,15 @@ var loop = setInterval(function(){
 
 
 // SKILLS SECTION
-
-$(window).on('scroll', function() {
-	console.log("This isn't displaying");
-}, function() {
-	console.log("This IS displaying?");
+$skills = $("#skills-section");
+$window.on('scroll', function() {
+	if ( $window.scrollTop() > $skills.offset().top -
+										 $skills.height() / 2 ) {
+		$(".progress:eq(0)").animate({ value: '90' }, 1000);
+		$(".progress:eq(1)").animate({ value: '85' }, 2000);
+		$(".progress:eq(2)").animate({ value: '68' }, 3000);
+		$(".progress:eq(3)").animate({ value: '73' }, 4000);
+	}
 });
 
 
@@ -76,8 +50,3 @@ $(window).on('scroll', function() {
 
 
 
-	// $("progress").animate({
-	// 	value: '80',
-	// 	borderColor: 'white'
-	// });
-	// console.log("callback");
