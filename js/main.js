@@ -10,6 +10,7 @@ $(function() {
 // 	console.log("hovering");
 // });
 
+
 // Astronaut animation
 var astronaut = $("#astronaut"), $window = $(window);
 var mouseX = mouseY = xp = yp = 0;
@@ -31,7 +32,7 @@ var loop = setInterval(function(){
 	    				 left:xp, top:yp, 
 	    				 opacity: 1} );
 	    } else {
-	    	TweenLite.to(astronaut, 1, {
+	    	TweenLite.to(astronaut, 1.2, {
 	    				left:xp, top:yp,
 	    				opacity: 0 } );
 	    }
