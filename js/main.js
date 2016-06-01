@@ -2,17 +2,6 @@
 
 $(function() {
 
-
-TweenMax.staggerFrom($('#what-i-do i'), 1, 
-	{ rotation: "+=360", scale: 1.5}, 0.3);
-
-$('#what-i-do').on('mouseover', 'i', function() {
-	console.log($(this));
-	TweenMax.staggerFrom($(this), 1, 
-	{ rotation: "+=90"}, 0.3);
-});
-
-
 // Astronaut animation
 var astronaut = $("#astronaut"), $window = $(window);
 var mouseX = mouseY = xp = yp = 0;

@@ -72,15 +72,15 @@ nav, .jumbotron {
 
 /* What-I-Do Section */
 #what-i-do {
-	padding: 10px;
 	color: gray;
     background: linear-gradient( 0deg, #0B1320, #000000, #404D58 );
     border-bottom: 2px solid gray; 
-    border-top: 2px solid gray; 
+    border-top: 2px solid gray;
+    height: 100%; 
 }
 #what-i-do .col-md-4 {
-	padding: 1.5rem;
-	margin: 1rem auto;
+	padding: 3rem;
+	min-height: 100%;
 }
 #what-i-do .col-md-4 h4 {
 	font-weight: bolder;
@@ -91,7 +91,6 @@ nav, .jumbotron {
 	margin: 0.5rem auto;
 	font-size: 5rem;
 }
-
 /* Skills Section */
 #skills-section {
 	background-image: url(../img/patterns/abstract.png);
