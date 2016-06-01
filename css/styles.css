@@ -56,10 +56,9 @@ nav, .jumbotron {
 #my-work-jumbo {
 	position: relative;
 	margin: 0 auto;
-	margin-top: 25%;
 }
 #my-work-jumbo button {
-	display: block;
+	position: relative;
 	opacity: 1;
 	text-align: center;
 	margin: 0 auto;
@@ -120,8 +119,9 @@ nav, .jumbotron {
 	line-height: 6rem;
 }
 .progress-text {
-	color:#F4AD4E; 
+	color:white; 
 	font-weight: bold; 
+	font-size: 1rem;
 	position: relative; 
 	top: -5.3rem; 
 	margin-left: 8%;
@@ -139,6 +139,8 @@ nav, .jumbotron {
     transform: rotate(50deg) ;
   }
 }
+
+
 
 
 /* MEDIA QUERIES

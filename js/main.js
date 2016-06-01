@@ -3,19 +3,21 @@
 $(function() {
 
 
-// $("#site-title").blast({delimeter: "character"});
+TweenMax.staggerFrom($('#what-i-do i'), 1, 
+	{ rotation: "+=360", scale: 1.5}, 0.3);
 
-// $("#site-title").on("hover", ".blast", function() {
-// 	// TweenLite.to(this, 1, {marginBottom:"5px"});
-// 	console.log("hovering");
-// });
+$('#what-i-do').on('mouseover', 'i', function() {
+	console.log($(this));
+	TweenMax.staggerFrom($(this), 1, 
+	{ rotation: "+=90"}, 0.3);
+});
 
 
 // Astronaut animation
 var astronaut = $("#astronaut"), $window = $(window);
 var mouseX = mouseY = xp = yp = 0;
 
-$(".jumbotron").mousemove(function(e){
+$(".jumbotron").mousemove( function(e) {
    mouseX = e.pageX ;
    mouseY = e.pageY - 50; 
 });
@@ -24,18 +26,18 @@ $(".jumbotron").mousemove(function(e){
 // setInterval & Tween ( or css() ) is smoother than animation()
 var loop = setInterval(function(){
 	// Damper on 15 .. can change ... higher is slower
-    	xp += (mouseX - xp) / 13;
-		yp += (mouseY - yp) / 13;
+	xp += (mouseX - xp) / 13;
+	yp += (mouseY - yp) / 13;
 
-	    if ( xp > 50 && xp < ($window.width() - 150) && yp > 0 && yp < 460) {
-	    	TweenLite.to(astronaut, 1.5, {
-	    				 left:xp, top:yp, 
-	    				 opacity: 1} );
-	    } else {
-	    	TweenLite.to(astronaut, 1.2, {
-	    				left:xp, top:yp,
-	    				opacity: 0 } );
-	    }
+    if ( xp > 50 && xp < ($window.width() - 150) && yp > 0 && yp < 460) {
+    	TweenMax.to(astronaut, 1.5, {
+    				left:xp, top:yp, 
+    				opacity: 1} );
+    } else {
+    	TweenMax.to(astronaut, 1.2, {
+    				left:xp, top:yp,
+    				opacity: 0} );
+    }
 }, 33);
 
 
@@ -45,12 +47,13 @@ var $skills = $("#skills-section"),
 progressText.hide();
 
 $window.on('scroll', function() {
-	if ( $window.scrollTop() > $skills.offset().top -
-									( $skills.height() / 2 )  ){
+	if ( $window.scrollTop() > 
+			$skills.offset().top - ( $skills.height() / 2 )  ){
+
 		$(".progress:eq(0)").animate({ value: '92' }, 1000); // JS
 		$(".progress:eq(1)").animate({ value: '83' }, 2000); // HTML
-		$(".progress:eq(2)").animate({ value: '68' }, 3000); // CSS
-		$(".progress:eq(3)").animate({ value: '75' }, 4000); // etc
+		$(".progress:eq(2)").animate({ value: '72' }, 3000); // CSS
+		$(".progress:eq(3)").animate({ value: '85' }, 4000); // etc
 		progressText.fadeIn('slow');
 	}
 });
