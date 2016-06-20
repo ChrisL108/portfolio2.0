@@ -107,17 +107,28 @@ nav, .jumbotron {
 	top: -5.3rem; 
 	margin-left: 8%;
 }
-
+/* PROJECTS */
 #projects {
 	padding: 2rem;
+	margin-top: 2rem;
 }
-
+.project-title {
+	padding: 3rem;
+}
+.project-title h1 {
+	font-size: 4rem;
+	border-bottom: 1px solid #666;
+}
 .modal-dialog {
 	background-color: #999;
 	padding: .3rem;
 }
 .modal-content {
 	padding: 1rem;
+}
+
+#onepass {
+	margin:5px;
 }
 
 /* spin keyframes for astronaut */
