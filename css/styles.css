@@ -1,10 +1,9 @@
 html, body {
 	font-size: 16px;
-	/* I put font in nav & jumbotron only below */
-	/*font-family: 'Orbitron', sans-serif;*/
 	margin: 0;
 	padding: 0;
-	background-color:#A6AFB9;
+	/*font-family: 'Orbitron', sans-serif;*/
+	font-family: 'Arimo', sans-serif;
 }
 nav {
 	margin: 0;
@@ -12,7 +11,7 @@ nav {
 }
 /* Font for nav and jumbotron */
 nav, .jumbotron {
-	font-family: 'Orbitron', sans-serif;
+	/*font-family: 'Orbitron', sans-serif;*/
 }
 nav a {
 	color: #eceeef;
@@ -86,19 +85,18 @@ nav a:hover {
 /*~~~~ RECENT WORK*/
 #recent-work-heading {
     color: #09101c;
-    /* padding: 0px; */
-    margin: 0;
-    border-top: 5px outset #c5c5c5;
-    border-bottom: 5px outset #c5c5c5;
+    height: 15rem;
+    border-top: 5px inset teal;
+    border-bottom: 5px outset gray;
     border-radius: 0;
     background-color: rgb(168, 173, 179);
 }
 #recent-work-heading h1 {
-	margin: .5rem 6rem;
+	margin: .8rem 6rem;
 }
 #recent-work-heading p {
 	line-height: 0;
-	color:#666;
+	color:#333;
 }
 #recent-work-heading i {
 	display: inline-block;
@@ -121,6 +119,9 @@ nav a:hover {
 	font-size: 4rem;
 	border-bottom: 1px solid #666;
 }
+.project-tech i {
+
+}
 .project-imgs {
 	margin: 0 auto;
 }
@@ -133,10 +134,7 @@ nav a:hover {
 }
 
 #onepass {
-	background:-webkit-linear-gradient(blue, #c9c9c9, #adadad);
-	background:-o-linear-gradient(blue, #c9c9c9, #adadad);
-	background:linear-gradient(blue, #c9c9c9, #adadad);
-	margin:15px;
+	/* small section about onepass heading? */
 }
 
 
