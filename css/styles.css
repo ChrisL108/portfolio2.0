@@ -14,6 +14,13 @@ nav {
 nav, .jumbotron {
 	font-family: 'Orbitron', sans-serif;
 }
+nav a {
+	color: #eceeef;
+}
+nav a:hover {
+	color:rgba(224, 224, 224, 0.62);
+}
+
  /* Navbar collapsable-content button */
 .navbar-toggler {
 	border: 1px solid #A6AFB9;
@@ -53,10 +60,12 @@ nav, .jumbotron {
 	animation:         spin 8s infinite alternate; 
 }
 
-/* What-I-Do Section */
+/* ~~~~~ What-I-Do Section */
 #what-i-do {
 	color: gray;
-    background: linear-gradient( 0deg, #0B1320, #000000, #404D58 );
+	background: -webkit-linear-gradient(bottom, #0B1320, #000000, #404D58);
+	background: -o-linear-gradient(bottom, #0B1320, #000000, #404D58);
+	background: linear-gradient(to top, #0B1320, #000000, #404D58);
     border-bottom: 2px solid gray; 
     border-top: 2px solid gray;
     height: 100%; 
@@ -74,46 +83,39 @@ nav, .jumbotron {
 	margin: 0.5rem auto;
 	font-size: 5rem;
 }
-/* Skills Section */
-#skills-section {
+/*~~~~ RECENT WORK*/
+#recent-work-heading {
+    color: #09101c;
+    /* padding: 0px; */
+    margin: 0;
+    border-top: 5px outset #c5c5c5;
+    border-bottom: 5px outset #c5c5c5;
+    border-radius: 0;
+    background-color: rgb(168, 173, 179);
+}
+#recent-work-heading h1 {
+	margin: .5rem 6rem;
+}
+#recent-work-heading p {
+	line-height: 0;
+	color:#666;
+}
+#recent-work-heading i {
+	display: inline-block;
+}
+/* ~~~~~~~~~ PROJECTS */
+#projects {
+	padding: 2rem;
+	margin-top: 0;
 	background-image: url(../img/patterns/abstract.png);
 	background-repeat: repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	padding-top: 5rem;
-}
-#skills-section img {
-	padding: 0.2rem;
-	margin: 0 auto;
-	-webkit-box-shadow: 6px 12px 60px rgba(5,5,5,0.8);
-    box-shadow: 6px 12px 60px rgba(5,5,5,0.8);
-    border: 1rem solid rgba(119, 119, 119, 0.18);
-}
-/* Progress Bars */
-.progress {
-	height: 1.7rem;
-}
-
-.progress[value] {
-	/*progress bar data*/
-	margin: 4rem auto;
-	line-height: 6rem;
-}
-.progress-text {
-	color:white; 
-	font-weight: bold; 
-	font-size: 1rem;
-	position: relative; 
-	top: -5.3rem; 
-	margin-left: 8%;
-}
-/* PROJECTS */
-#projects {
-	padding: 2rem;
-	margin-top: 2rem;
 }
 .project-title {
 	padding: 3rem;
+	margin: auto;
+	color: #b1ffff;
 }
 .project-title h1 {
 	font-size: 4rem;
@@ -131,10 +133,17 @@ nav, .jumbotron {
 }
 
 #onepass {
-	background:linear-gradient(blue, #c9c9c9, #adadad );
+	background:-webkit-linear-gradient(blue, #c9c9c9, #adadad);
+	background:-o-linear-gradient(blue, #c9c9c9, #adadad);
+	background:linear-gradient(blue, #c9c9c9, #adadad);
 	margin:15px;
 }
 
+
+/* ~~~~~~~ SKILLS SECTION */
+/*#skills-section {
+
+}*/
 /* spin keyframes for astronaut */
 @keyframes spin {
   0% {
