@@ -52,23 +52,6 @@ nav, .jumbotron {
 	-o-animation:      spin 8s infinite alternate; 
 	animation:         spin 8s infinite alternate; 
 }
-/* jumbotron call-to-action */
-#my-work-jumbo {
-	position: relative;
-	margin: 0 auto;
-}
-#my-work-jumbo button {
-	position: relative;
-	opacity: 1;
-	text-align: center;
-	margin: 0 auto;
-	opacity: 0.6;
-	filter: alpha(opacity:60);
-}
-#my-work-jumbo button:hover {
-	opacity: 1;
-	filter: alpha(opacity:100);
-}
 
 /* What-I-Do Section */
 #what-i-do {
@@ -108,8 +91,7 @@ nav, .jumbotron {
 }
 /* Progress Bars */
 .progress {
-	height: 1.5rem;
-	margin: 3rem auto;
+	height: 1.7rem;
 }
 
 .progress[value] {
@@ -124,6 +106,18 @@ nav, .jumbotron {
 	position: relative; 
 	top: -5.3rem; 
 	margin-left: 8%;
+}
+
+#projects {
+	padding: 2rem;
+}
+
+.modal-dialog {
+	background-color: #999;
+	padding: .3rem;
+}
+.modal-content {
+	padding: 1rem;
 }
 
 /* spin keyframes for astronaut */

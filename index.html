@@ -46,10 +46,6 @@
 	<div class="container-fluid">
 		<!-- Header Title -->
 		<h1 id="site-title" class="display-3 text-sm-center">WEB <span class="text-muted">DESIGNER</span> &amp; DEVELOPER</h1>
-		<section class="lead text-sm-center center-block" id="my-work-jumbo">
-			<!-- My Work -->
-			<!-- <button class="btn btn-md" href="#my-work" role="button">My Work</button> -->
-		</section>
 		<!-- Astronaut -->
 		<div id="astronaut">
 			<img src="img/astronaut-cutout.png" alt="astronaut floating around">
@@ -78,52 +74,35 @@
 
 <!-- Left Arrow fontawesome   <i class="fa fa-chevron-left"></i> -->
  <!-- SKILLS SECTION  -->
-<div class="container-fluid" id="skills-section">
+<div class="container-fluid" id="skills-section" style="display:none;">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-sm-12">
-				<img src="img/social/javascript.png" alt="I love javascript" class="img img-fluid" width="150" id="javascript" >
-			</div>
-			<div class="col-md-9 col-sm-12">
+	
+			<div class="col-sm-12">
 				<progress class="progress" max="100">92%</progress>
 				<p class="progress-text">Adding interactivity with Javascript..</p>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-3 col-sm-12">
-				<img src="img/social/html.png" alt="" class="img img-fluid" width="150" id="html">
-			</div>
-			<div class="col-md-9 col-sm-12">
+
+			<div class="col-sm-12">
 				<progress class="progress" max="100">83%</progress>
 				<p class="progress-text">Keeping up with W3C standards for structure</p>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-3 col-sm-12">
-				<img src="img/social/css.png" alt="I am decent with css" class="img img-fluid" width="150" id="css">
-			</div>
-			<div class="col-md-9 col-sm-12">
+
+			<div class="col-sm-12">
 				<progress class="progress" max="100">72%</progress>
 				<p class="progress-text">Implementing unique styles with CSS</p>
 			</div>
 		</div>
-
-		<div id="extras" class="text-sm-center text-success">
-			<span>WordPress - </span>
-			<span>Angular2 - </span>
-			<span>PHP - </span>
-			<span>Bootstrap 3/4</span>
-		</div>
 		
 		<div class="row">
-			<div class="col-md-3 col-sm-12">
-				<img src="img/social/jquery.png" width="150" alt="who doesn't like jquery" class="img img-fluid" id="jquery">
-				<img src="img/social/github.png" width="150" alt="github is my right hand octopussy" class="img img-fluid" id="github">
-				<img src="img/social/bootstrap.png" width="150" alt="bootstrap helps with everything" class="img img-fluid" id="bootstrap">
-			</div>
-			<div class="col-md-9 col-sm-12 p-t-3">
+
+			<div class="col-sm-12">
 				<progress class="progress" max="100">85%</progress>	
 				<p class="progress-text">More popular technologies I can implement</p>
 			</div>
@@ -132,11 +111,37 @@
 	</div>
 </div>
 
-<div class="container">
-	<div id="my-work">
+<!-- PROJECTS -->
+<div class="container" id="projects">
+
+	<!-- OnePASS -->
+	<div id="onepass">
+		<!-- onepass title -->
+		<div class="col-md-5 col-sm-12" data-toggle="modal" data-target="#onepass-modal">
+			<h1 class="display-3">OnePASS</h1>
+			<p class="text-muted text-xs-center"> Password Manager</p>
+	<!-- 		<button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#onepass-modal">
+			  More Info
+			</button> -->
+		</div>
 		
+		<!-- onepass image -->
+		<div class="col-md-7 col-sm-12">
+			<img class="img-fluid media-middle" src="http://placehold.it/500x200" data-toggle="modal" data-target="#onepass-modal">
+		</div>
+
+		<!-- onepass Modal -->
+		<div class="modal fade" id="onepass-modal" tabindex="-1" role="dialog"
+		     aria-labelledby="myModalLabel3" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		  <h1>OnePASS - Password Manager</h1>
+		    <div class="modal-content">
+		      <h3>A app for managing your passwords as well as generating stronger ones - <small>no need to remember every password or have the same password for every online service </small></h3>
+		    </div> <!-- content -->
+		  </div> <!-- dialog -->
+		</div> <!-- modal -->
 	</div>
-</div> 
+</div> <!-- my-work & container -->
 
 
 
