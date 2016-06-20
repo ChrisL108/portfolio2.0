@@ -119,6 +119,9 @@ nav, .jumbotron {
 	font-size: 4rem;
 	border-bottom: 1px solid #666;
 }
+.project-imgs {
+	margin: 0 auto;
+}
 .modal-dialog {
 	background-color: #999;
 	padding: .3rem;
@@ -128,7 +131,8 @@ nav, .jumbotron {
 }
 
 #onepass {
-	margin:5px;
+	background:linear-gradient(blue, #c9c9c9, #adadad );
+	margin:15px;
 }
 
 /* spin keyframes for astronaut */
