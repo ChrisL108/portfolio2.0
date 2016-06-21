@@ -135,6 +135,7 @@ nav a:hover {
 .modal-dialog {
 	background-color: #999;
 	padding: .3rem;
+	text-align: center;
 }
 .modal-content {
 	padding: 1rem;
@@ -148,6 +149,8 @@ nav a:hover {
 
 hr {
 	background-color: gray;
+	height: 0;
+	max-height: 0;
 }
 
 }*/
