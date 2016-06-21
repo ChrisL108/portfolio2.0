@@ -146,8 +146,9 @@ nav a:hover {
 }
 
 
-/* ~~~~~~~ SKILLS SECTION */
-/*#skills-section {
+hr {
+	background-color: gray;
+}
 
 }*/
 /* spin keyframes for astronaut */
@@ -162,8 +163,6 @@ nav a:hover {
     transform: rotate(50deg) ;
   }
 }
-
-
 
 
 /* MEDIA QUERIES
