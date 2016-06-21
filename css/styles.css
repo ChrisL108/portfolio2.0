@@ -89,7 +89,7 @@ nav a:hover {
     border-top: 5px inset teal;
     border-bottom: 5px outset gray;
     border-radius: 0;
-    background-color: rgb(168, 173, 179);
+    background-color: rgb(143, 165, 204);
 }
 #recent-work-heading h1 {
 	margin: .8rem 6rem;
@@ -112,18 +112,21 @@ nav a:hover {
 }
 .project-title {
 	padding: 3rem;
-	margin: auto;
 	color: #b1ffff;
 }
 .project-title h1 {
 	font-size: 4rem;
 	border-bottom: 1px solid #666;
 }
-.project-tech i {
-
+.project-tech {
+	margin: 0 auto;
+	text-align: center;
 }
 .project-imgs {
-	margin: 0 auto;
+	width: 80%;
+	height:16.5rem;
+	margin: 3rem auto;
+	border: 2px solid gray;
 }
 .modal-dialog {
 	background-color: #999;
@@ -132,6 +135,7 @@ nav a:hover {
 .modal-content {
 	padding: 1rem;
 }
+
 
 #onepass {
 	/* small section about onepass heading? */
