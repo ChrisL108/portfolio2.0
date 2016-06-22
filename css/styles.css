@@ -2,8 +2,8 @@ html, body {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
-	/*font-family: 'Orbitron', sans-serif;*/
-	font-family: 'Arimo', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Arimo', sans-serif;*/
 }
 nav {
 	margin: 0;
@@ -44,6 +44,7 @@ nav a:hover {
 	height: 600px;
 	margin-bottom: 0;
 	border-bottom: 2px solid #4E4E4E;
+	overflow: hidden;
 }
 .jumbotron h1 {
 	text-shadow: 2px 1px #F4AD4E;
@@ -56,7 +57,7 @@ nav a:hover {
 	-webkit-animation: spin 8s infinite alternate; 
 	-moz-animation:    spin 8s infinite alternate; 
 	-o-animation:      spin 8s infinite alternate; 
-	animation:         spin 8s infinite alternate; 
+	animation:         spin 8s infinite alternate;
 }
 
 /* ~~~~~ What-I-Do Section */
@@ -82,6 +83,7 @@ nav a:hover {
 	margin: 0.5rem auto;
 	font-size: 5rem;
 }
+
 /*~~~~ RECENT WORK*/
 #recent-work-heading {
     color: #09101c;
@@ -90,6 +92,7 @@ nav a:hover {
     border-bottom: 5px outset gray;
     border-radius: 0;
     background-color: rgb(143, 165, 204);
+
 }
 #recent-work-heading h1 {
 	margin: .8rem 6rem;
@@ -101,6 +104,7 @@ nav a:hover {
 #recent-work-heading i {
 	display: inline-block;
 }
+
 /* ~~~~~~~~~ PROJECTS */
 #projects {
 	padding: 2rem;
@@ -108,8 +112,14 @@ nav a:hover {
 	background-image: url(../img/patterns/abstract.png);
 	background-repeat: repeat;
 	background-attachment: fixed;
-	background-size: cover;
 }
+#projects hr {
+	margin: 8rem auto;
+	background-color: gray;
+	height: 0;
+	max-height: 0;
+}
+
 .project-title {
 	padding: 3rem;
 	color: #b1ffff;
@@ -122,15 +132,20 @@ nav a:hover {
 	margin: 0 auto;
 	text-align: center;
 }
-.project-tech img {
+.project-tech img, .project-tech i {
 	position: relative;
 	top: -0.5rem;
-	width: 60px;
+	width: 85px;
+	margin: 0 auto;
 }
 .project-imgs {
-	width: 70%;
+	width: 35rem;
+	height: 20rem;
 	margin: 3rem auto;
 	border: 2px solid gray;
+}
+.modal a:hover {
+	text-decoration: none;
 }
 .modal-dialog {
 	background-color: #999;
@@ -141,19 +156,13 @@ nav a:hover {
 	padding: 1rem;
 }
 
-
-#onepass {
-	/* small section about onepass heading? */
+/* onepass */
+#projects #onepass {
+	background-color: teal;
+	margin-top: 5rem;
 }
 
 
-hr {
-	background-color: gray;
-	height: 0;
-	max-height: 0;
-}
-
-}*/
 /* spin keyframes for astronaut */
 @keyframes spin {
   0% {
@@ -186,8 +195,8 @@ hr {
 }
 @media (max-width: 61rem) { 	
 
-	.jumbotron {
-		text-align: center;
+	.jumbotron h1 {
+		font-size: 3rem;
 	}
 }
 

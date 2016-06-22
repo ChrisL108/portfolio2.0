@@ -29,7 +29,6 @@ var loop = setInterval(function(){
     }
 }, 33);
 
-
 // SKILLS SECTION
 var $skills = $("#skills-section"),
 	progressText = $(".progress-text");
@@ -38,7 +37,6 @@ progressText.hide();
 $window.on('scroll', function() {
 	if ( $window.scrollTop() > 
 			$skills.offset().top - ( $skills.height() / 2 )  ){
-
 		$(".progress:eq(0)").animate({ value: '92' }, 1000); // JS
 		$(".progress:eq(1)").animate({ value: '83' }, 2000); // HTML
 		$(".progress:eq(2)").animate({ value: '72' }, 3000); // CSS
@@ -48,8 +46,7 @@ $window.on('scroll', function() {
 });
 
 
-
-});   // end ready function
+});   // end ready())
 
 
 
