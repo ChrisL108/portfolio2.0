@@ -92,6 +92,7 @@ nav a:hover {
     border-bottom: 5px outset gray;
     border-radius: 0;
     background-color: rgb(143, 165, 204);
+    outline: 1px inset white;
 
 }
 #recent-work-heading h1 {
@@ -103,6 +104,10 @@ nav a:hover {
 }
 #recent-work-heading i {
 	display: inline-block;
+}
+
+#recent-work-heading div.col-md-12 {
+	margin: 1rem auto;
 }
 
 /* ~~~~~~~~~ PROJECTS */
@@ -128,6 +133,9 @@ nav a:hover {
 	font-size: 4rem;
 	border-bottom: 1px solid #666;
 }
+.project-title p {
+	font-style: italic;
+}
 .project-tech {
 	margin: 0 auto;
 	text-align: center;
@@ -139,8 +147,8 @@ nav a:hover {
 	margin: 0 auto;
 }
 .project-imgs {
-	width: 35rem;
-	height: 20rem;
+/*	width: 35rem;
+	height: 20rem;*/
 	margin: 3rem auto;
 	border: 2px solid gray;
 }
@@ -159,7 +167,7 @@ nav a:hover {
 /* onepass */
 #projects #onepass {
 	background-color: teal;
-	margin-top: 5rem;
+	margin-top: 3rem;
 }
 
 
@@ -190,14 +198,17 @@ nav a:hover {
 }
 
 /*Medium devices (tablets, 48em and up)*/
-@media (min-width: 48em) { 
-
+@media (max-width: 48em) { 
+	#recent-work-heading h1 {
+		font-size: 4rem;
+	}
 }
 @media (max-width: 61rem) { 	
 
 	.jumbotron h1 {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
+
 }
 
 /*Large devices (desktops, 62em and up)*/
