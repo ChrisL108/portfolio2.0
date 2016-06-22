@@ -152,6 +152,9 @@ nav a:hover {
 	margin: 3rem auto;
 	border: 2px solid gray;
 }
+.modal {
+	background-color: #111;
+}
 .modal a:hover {
 	text-decoration: none;
 }
