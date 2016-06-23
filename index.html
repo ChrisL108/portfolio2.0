@@ -54,6 +54,7 @@
 			</div>
 		</div>
 	</div>  <!-- .jumbotron -->
+
 	<div id="what-i-do" class="container-fluid text-xs-center">
 		<div class="row">
 			<div class="col-md-4">
@@ -71,37 +72,44 @@
 				<h4 class="display-5">Creative Edge</h4>
 				<p>Offering unique and innovative perspective to help establish you and your company through the web. Making sure every project is creatively new keeps me on my toes and it’s why I love web design and development, there’s always something to learn!</p>
 			</div>
-		</div>
-	</div>
+		</div> <!-- .row -->
+	</div> <!-- #what-i-do -->
 
+	<!-- ABOUT -->
+	<div class="container-fluid" id="about">
+	<div class="row">
 
-	<!-- Recent Work Heading -->
+			<div class="col-md-6 col-sm-12">
+				<h1 class="text-info display-4" id="about_text">I'm Chris Lacaille</h1>
+				<h1 class="text-info display-4" id="about_text2">Web <span class="text-muted">Developer </span> and <span class="text-muted">Designer </span></h1>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<img src="img/me-in-suit.png" alt="astronaught" class="img-fluid pull-sm-right hidden-md-down">
+			</div>	
+		
+	</div> <!-- row -->
+	</div>  <!-- container-fluid -->
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~PROJECTS HEADING -->
 	<div class="container-fluid" id="recent-work-heading">
-		<div class="row">
-			<div class="col-md-12">
-				<h1 class="text-xs-center display-2">
-		 			PR<i class="fa fa-globe fa-1x fa-spin" aria-hidden="true"></i>JECTS
-	 			</h1>
-
-				<hr class="divider" width="50%">
-
-				<div class="col-sm-12">
-					<p class="text-xs-center">
-						click project to view<br>
-						<i class="fa fa-arrow-down p-t-2" aria-hidden="true"></i>
-					</p>
-				</div>
-			</div> <!-- #recent-work-heading -->
-		</div> <!-- row -->
-	</div> <!-- container-fluid -->
-
-
-
-
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-xs-center display-2">
+	 			PR<i class="fa fa-globe fa-1x fa-spin" aria-hidden="true"></i>JECTS
+ 			</h1>
+			<hr class="divider" width="50%">
+			<br>
+			<p class="text-xs-center m-b-2">
+				click project to view<br>
+				<i class="fa fa-arrow-down p-t-2" aria-hidden="true"></i>
+			</p>
+		</div> 
+	</div> <!-- row -->
+	</div> <!-- #recent-work-heading & container-fluid -->
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~ PROJECTS -->
 	<div class="container-fluid" id="projects">
-		<div class="row">
+	<div class="row">
 
 	<!-- OnePASS -->
 			<div id="onepass">
@@ -172,8 +180,8 @@
 						<a href="https://github.com/ChrisL108/source_weather"><i class="fa fa-github-square fa-2x"></i></a><br>
 						<button type="button" class="btn"><a href="http://test.centralconcretecreations.com/source_weather/" target="_blank">Live Link</a></button>
 					<div class="modal-content">
-						<h3 class="lead">A weather app that finds your general location</h3>
-						<p>This is a simple app using JSON callbacks to get the weather based on your location or I.P.</p>
+						<h3 class="lead">A weather app that finds weather in your general location</h3>
+						<p>Simple app using JSON callbacks to get weather based on location or I.P. depending on browser and security settings.</p>
 					</div> <!-- content -->
 					</div> <!-- dialog -->
 				</div> <!-- .modal -->
@@ -243,7 +251,7 @@
 				<!-- ccc Modal -->
 				<div class="modal fade" id="ccc-modal" tabindex="-1" role="dialog" aria-hidden="true">
 			  		<div class="modal-dialog" role="document">
-					  <h1>CentralConcreteCreations.com</h1>
+					  <h1>Central Concrete Creations.com</h1>
 					  <button type="button" class="btn"><a href="http://centralconcretecreations.com/" target="_blank">Live Link</a></button>
 			    	<div class="modal-content">
 				      <h3 class="lead">Website made for a small business client</h3>
@@ -260,10 +268,11 @@
 	</div> <!-- #projects & .container -->
 
 
-<script src="js/jquery-2.2.4.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- <script src="js/jquery-ui.min.js"></script> -->
 <script src="https://use.fontawesome.com/f0471aa1ab.js"></script>
+
+<!-- Bootstrap & jQuery CDN's -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
 
 <!--CDN link for  TweenMax-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
@@ -273,10 +282,10 @@
 
 
 
+<!-- <script src="js/jquery-2.2.4.js"></script>
+<script src="js/bootstrap.min.js"></script> -->
+<!-- <script src="js/jquery-ui.min.js"></script> -->
 
-<!-- Bootstrap & jQuery CDN's -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script> -->
 
 <!--CDN links for  TweenLite-->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>

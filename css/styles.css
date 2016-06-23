@@ -83,12 +83,28 @@ nav a:hover {
 	margin: 0.5rem auto;
 	font-size: 5rem;
 }
+/* ~~~~~ABOUT~~~~ */
+#about {
+	padding: 5rem;
+	height: 35rem;
+	background-image: url(../img/img-noise.png);
+	background-repeat: repeat;
+	background-attachment: fixed;
+	border-top: 12px solid black;
+    border-bottom: 12px solid black;
+}
+#about img {
+	position: relative;
+	height: 28rem;
+	bottom:0;
+	overflow: hidden;
+	border-bottom: 2px solid #333;
+}
 
 /*~~~~ RECENT WORK*/
 #recent-work-heading {
     color: #09101c;
     height: 15rem;
-    border-top: 5px inset teal;
     border-bottom: 5px outset gray;
     border-radius: 0;
     background-color: rgb(143, 165, 204);
@@ -96,7 +112,7 @@ nav a:hover {
 
 }
 #recent-work-heading h1 {
-	margin: .8rem 6rem;
+	padding: .8rem 6rem;
 }
 #recent-work-heading p {
 	line-height: 0;
@@ -106,17 +122,13 @@ nav a:hover {
 	display: inline-block;
 }
 
-#recent-work-heading div.col-md-12 {
-	margin: 1rem auto;
-}
-
 /* ~~~~~~~~~ PROJECTS */
 #projects {
 	padding: 2rem;
 	margin-top: 0;
 	background-image: url(../img/patterns/abstract.png);
 	background-repeat: repeat;
-	background-attachment: fixed;
+	background-attachment: scroll;
 }
 #projects hr {
 	margin: 8rem auto;
@@ -155,18 +167,25 @@ nav a:hover {
 .modal {
 	background-color: #111;
 }
+.modal h1 {
+	padding: 2rem 5rem;
+}
 .modal a:hover {
 	text-decoration: none;
 }
 .modal-dialog {
-	background-color: #999;
-	padding: .3rem;
-	text-align: center;
+    background-color: rgba(175, 175, 175, 0.26);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 7px inset #d2d2d2;
+    color: #c5c5c5;
 }
 .modal-content {
-	padding: 1rem;
+    padding: 1rem;
+    background-color: #2f2f2f;
+    color: cornflowerblue;
 }
-
 /* onepass */
 #projects #onepass {
 	background-color: teal;

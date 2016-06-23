@@ -30,39 +30,40 @@ var loop = setInterval(function(){
 }, 33);
 
 // SKILLS SECTION
-var $skills = $("#skills-section"),
-	progressText = $(".progress-text");
-progressText.hide();
+var $about = $("#about"), $about_text = $('#about_text'),
+						  $about_text2 = $('#about_text2');
 
 $window.on('scroll', function() {
-	if ( $window.scrollTop() > 
-			$skills.offset().top - ( $skills.height() / 2 )  ){
-		$(".progress:eq(0)").animate({ value: '92' }, 1000); // JS
-		$(".progress:eq(1)").animate({ value: '83' }, 2000); // HTML
-		$(".progress:eq(2)").animate({ value: '72' }, 3000); // CSS
-		$(".progress:eq(3)").animate({ value: '85' }, 4000); // etc
-		progressText.fadeIn('slow');
+	if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )  ){
+		$about_text.fadeIn('fast', function() {
+				$about_text2.fadeIn('slow');
+		});
+		
+	} else {
+		$about_text.slideUp('fast', function() {
+				$about_text2.slideUp('fast');
+		});
 	}
 });
 
 
 // smoother scrolling
-$(document).ready(function(){
-  $('a[href*=#]').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname) {
-      var $target = $(this.hash);
-      $target = $target.length && $target
-      || $('[name=' + this.hash.slice(1) +']');
-      if ($target.length) {
-        var targetOffset = $target.offset().top;
-        $('html,body')
-        .animate({scrollTop: targetOffset}, 1000);
-       return false;
-      }
-    }
-  });
-});
+// $(document).ready(function(){
+//   $('a[href*=#]').click(function() {
+//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+//     && location.hostname == this.hostname) {
+//       var $target = $(this.hash);
+//       $target = $target.length && $target
+//       || $('[name=' + this.hash.slice(1) +']');
+//       if ($target.length) {
+//         var targetOffset = $target.offset().top;
+//         $('html,body')
+//         .animate({scrollTop: targetOffset}, 1000);
+//        return false;
+//       }
+//     }
+//   });
+// });
 
 
 });   // end ready())
