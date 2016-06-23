@@ -19,7 +19,9 @@ nav a {
 nav a:hover {
 	color:rgba(224, 224, 224, 0.62);
 }
-
+.navbar {
+    border-radius: 0 !important;
+}
  /* Navbar collapsable-content button */
 .navbar-toggler {
 	border: 1px solid #A6AFB9;
@@ -45,9 +47,23 @@ nav a:hover {
 	margin-bottom: 0;
 	border-bottom: 2px solid #4E4E4E;
 	overflow: hidden;
+	text-align: center;
 }
 .jumbotron h1 {
 	text-shadow: 2px 1px #F4AD4E;
+}
+button#work-link {
+    background-color: #b1ffff;
+    margin-top: 300px;
+}
+
+button#work-link:hover {
+    background-color: gray;
+}
+
+a:hover, a:active, a:visited {
+	text-decoration: none;
+	color: none;
 }
 #astronaut {
 	position: absolute;
@@ -95,10 +111,8 @@ nav a:hover {
 }
 #about img {
 	position: relative;
-	height: 28rem;
-	bottom:0;
+	height: 29rem;
 	overflow: hidden;
-	border-bottom: 2px solid #333;
 }
 
 /*~~~~ RECENT WORK*/
@@ -131,7 +145,7 @@ nav a:hover {
 	background-attachment: scroll;
 }
 #projects hr {
-	margin: 8rem auto;
+	margin: 7rem auto;
 	background-color: gray;
 	height: 0;
 	max-height: 0;
@@ -192,7 +206,10 @@ nav a:hover {
 	margin-top: 3rem;
 }
 
-
+.slow-spin {
+  -webkit-animation: fa-spin 6s infinite linear;
+  animation: fa-spin 6s infinite linear;
+}
 /* spin keyframes for astronaut */
 @keyframes spin {
   0% {

@@ -6,15 +6,10 @@
 <meta content="portfolio page by Chris Lacaille">
 <title>Portfolio 2.0</title>
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 <!-- Bootstrap CDN -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 
-<!-- Font Awesome -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-
-<!-- Font -->
-<!-- <link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'> -->
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <!-- Custom -->
 <link rel="stylesheet" href="css/styles.css">
@@ -26,8 +21,8 @@
 	    <div class="collapse text-xs-center" id="navbar-header">
 	      <div class="container-fluid bg-inverse p-a-1">
 	        <h3 class="display-4">Chris LaCaille</h3>
-	        <p>chrislacaille5@gmail.com</p>
-
+	        <a href="mailto:chrislacaille5@gmail.com" target="_top">Send Email</a><br>
+</p>
 			<!-- Social Media -->
 			<a href="https://github.com/ChrisL108"><i class="fa fa-github-square fa-2x"></i></a>
 	        <a href="https://twitter.com/chrislacaille5"><i class="fa fa-twitter-square fa-2x"></i></a>
@@ -48,6 +43,7 @@
 		<div class="container-fluid">
 			<!-- Header Title -->
 			<h1 id="site-title" class="display-3 text-sm-center">WEB <span class="text-muted">DESIGNER</span> &amp; DEVELOPER</h1>
+			<!-- <button id="work-link" class="btn btn-lg"><a href="#recent-work-heading">My Work</a></button> -->
 			<!-- Astronaut -->
 			<div id="astronaut">
 				<img src="img/astronaut-cutout.png" alt="astronaut floating around">
@@ -75,37 +71,38 @@
 		</div> <!-- .row -->
 	</div> <!-- #what-i-do -->
 
-	<!-- ABOUT -->
-	<div class="container-fluid" id="about">
-	<div class="row">
-
-			<div class="col-md-6 col-sm-12">
-				<h1 class="text-info display-4" id="about_text">I'm Chris Lacaille</h1>
-				<h1 class="text-info display-4" id="about_text2">Web <span class="text-muted">Developer </span> and <span class="text-muted">Designer </span></h1>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<img src="img/me-in-suit.png" alt="astronaught" class="img-fluid pull-sm-right hidden-md-down">
-			</div>	
-		
-	</div> <!-- row -->
-	</div>  <!-- container-fluid -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~ABOUT -->
+	<div class="container-fluid">
+		<div class="row">
+			<div id="about">
+				<div class="col-md-6 col-sm-12">
+					<h1 class="text-muted display-4 font-italic" id="about_text">Hey there!</h1>
+					<h1 class="text-muted display-3" id="about_text2">I <span class="text-info">design</span> &amp; <span class="text-info">build</span> custom websites!</h1>
+					<h1 class="display-4 font-white" style="color:white;" id="about_text3">Check it out!</h1>
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<img src="img/me-in-suit.png" alt="astronaught" class="img-fluid pull-sm-right hidden-md-down">
+				</div>	
+			</div> <!-- #about -->
+		</div> <!-- row -->
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~PROJECTS HEADING -->
-	<div class="container-fluid" id="recent-work-heading">
-	<div class="row">
-		<div class="col-md-12">
-			<h1 class="text-xs-center display-2">
-	 			PR<i class="fa fa-globe fa-1x fa-spin" aria-hidden="true"></i>JECTS
- 			</h1>
-			<hr class="divider" width="50%">
-			<br>
-			<p class="text-xs-center m-b-2">
-				click project to view<br>
-				<i class="fa fa-arrow-down p-t-2" aria-hidden="true"></i>
-			</p>
-		</div> 
-	</div> <!-- row -->
-	</div> <!-- #recent-work-heading & container-fluid -->
+		<div class="row">
+			<div id="recent-work-heading">
+				<div class="col-md-12">
+					<h1 class="text-xs-center display-2">
+			 			PR<i class="fa fa-globe fa-1x slow-spin" aria-hidden="true"></i>JECTS
+		 			</h1>
+					<hr class="divider" width="50%">
+					<br>
+					<p class="text-xs-center m-b-2">
+						click project to view<br>
+						<i class="fa fa-arrow-down p-t-2" aria-hidden="true"></i>
+					</p>
+				</div> 
+			</div> <!-- #recent-work-heading -->
+		</div> <!-- row -->
+	</div> <!-- container-fluid -->
 
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~ PROJECTS -->
 	<div class="container-fluid" id="projects">
@@ -149,7 +146,7 @@
 
 	</div> <!-- .row -->
 
-	<hr class="divider"> <!-- _____Divider____ -->
+						<hr class="divider"> <!-- _____Divider____ -->
 
 	<div class="row">
 
@@ -189,7 +186,7 @@
 
 		</div> <!-- .row -->
 
-	<hr class="divider"> <!-- _____Divider____ -->
+							<hr class="divider"> <!-- _____Divider____ -->
 
 		<div class="row">
 
@@ -218,7 +215,7 @@
 			    	<div class="modal-content">
 				      <h3 class="lead">DeafAndHoH is a community hub for the deaf and hard of hearing</h3>
 				      <p>A central meeting spot where the deaf and h.o.h. are able to find support and directory listing for audiologists and other helpful info for the disabled.</p>
-				      <h6>Non-Profit Internship:</h6>
+				      <h6 class="text-muted">Non-Profit Internship:</h6>
 				      <p>Senthil Srinivasan <small>senthil@deafandhoh.com</small></p>
 				    </div> <!-- content -->
 				  </div> <!-- dialog -->
@@ -227,12 +224,11 @@
 
 		</div> <!-- .row -->
 
-	<hr class="divider"> <!-- _____Divider____ -->
+							<hr class="divider"> <!-- _____Divider____ -->
 
 		<div class="row">
 
 		<!-- Central Concrete Creations -->
-
 			<div id="ccc">
 				<!-- image -->
 				<div class="col-md-6 col-sm-12">
@@ -263,19 +259,69 @@
 
 		</div> <!-- .row -->
 
+						<hr class="divider"> <!-- _____Divider____ -->
 
+	<div class="row">
+
+	<!-- Photoshop Sites -->
+
+			<div id="photoshop-sites" class="m-t-3">
+
+				<div class="col-sm-12 project-tech text-info">
+					<h2>Landing Page Designs</h2>
+				</div>
+				<!-- image -->
+				<div class="col-md-6 col-sm-12">
+					<img class="img-fluid project-imgs" src="img/proshade-crop.jpg" data-toggle="modal" data-target="#proshade-modal" alt="Source weather live weather app">
+				</div>
+				<!-- title / tech -->
+				<div class="col-md-6 col-sm-12">
+					<img class="img-fluid project-imgs" src="img/proteus.jpg" data-toggle="modal" data-target="#proteus-modal" alt="Source weather live weather app">
+				</div>
+				<!-- I used photoshop -->
+				<div class="col-sm-12 project-tech">
+					<img src="img/social/photoshop.png" alt="I used photoshop for website landing page designs">
+				</div>
+				<!-- Proshade Modal -->
+				<div class="modal fade" id="proshade-modal" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<h1>ProShade</h1>
+	
+					<div class="modal-content">
+						<p class="lead">Website design for window treatment company</p>
+						<img src="img/proshade.jpg" alt="proshade window treatment" width="100%">
+					</div> <!-- content -->
+					</div> <!-- dialog -->
+				</div> <!-- .modal -->
+
+				<!-- Proteus Modal -->
+				<div class="modal fade" id="proteus-modal" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<h1>Proteus Industries</h1>
+		
+					<div class="modal-content">
+						<h3 class="lead">Website design for company selling Flow Meters and simliar monitoring equipment</h3>
+					</div> <!-- content -->
+					</div> <!-- dialog -->
+				</div> <!-- .modal -->
+
+			</div> <!-- #photoshop-sites -->
+
+		</div> <!-- .row -->
 
 	</div> <!-- #projects & .container -->
 
 
-<script src="https://use.fontawesome.com/f0471aa1ab.js"></script>
-
 <!-- Bootstrap & jQuery CDN's -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/f0471aa1ab.js"></script>
+<!--CDN links for  TweenLite-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/easing/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
 
-<!--CDN link for  TweenMax-->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
@@ -286,8 +332,7 @@
 <script src="js/bootstrap.min.js"></script> -->
 <!-- <script src="js/jquery-ui.min.js"></script> -->
 
+<!--CDN link for  TweenMax-->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script> -->
 
-<!--CDN links for  TweenLite-->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/easing/EasePack.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script> -->
+
