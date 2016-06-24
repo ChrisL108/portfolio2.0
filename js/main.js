@@ -34,12 +34,11 @@ var $about = $("#about"), $about_text = $('#about_text'),
 		$about_text2 = $('#about_text2'), $about_text3 = $('#about_text3');
 
 $window.on('scroll', function() {
-	if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )  ){
-		$about_text.fadeIn('fast', function() {
-			$about_text2.fadeIn('normal', function() {
-        $about_text3.fadeIn('slow');
-      });
-		});
+	if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 2 )  ){
+		$about_text.slideDown('fast').delay(800);
+		$about_text2.fadeIn('slow').delay(1000);;
+    $about_text3.fadeIn('slow');
+      
 		
 	} else {
 		$about_text.slideUp('fast', function() {
