@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="portfolio page by Chris Lacaille">
+<meta name ="description" content="The web design and development portfolio page of Chris Lacaille">
+<meta name="keywords" content="chris lacaille, chris, web, website, websites, web design, design, graphic design, logo design, freelance, responsive, mobile, mobile design, development, responsive development, web development, unique, fun, developer, interaction, affordable, small business, personal">
 <title>Portfolio 2.0</title>
 
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
@@ -14,6 +15,18 @@
 <!-- Custom -->
 <link rel="stylesheet" href="css/styles.css">
 
+<!-- Hotjar Tracking Code for http://www.chrislacaille.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:223614,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
 </head>
 <body>
 
@@ -21,7 +34,10 @@
 	    <div class="collapse text-xs-center" id="navbar-header">
 	      <div class="container-fluid bg-inverse p-a-1">
 	        <h3 class="display-4">Chris LaCaille</h3>
-	        <a href="mailto:chrislacaille5@gmail.com" target="_top">Send Email</a><br>
+	        <a href="mailto:chrislacaille5@gmail.com" target="_top">chrislacaille5@gmail.com</a><br>
+	        <a href="https://docs.google.com/document/d/1v8mjWptKUdiDgH7vXhk8A3ho8RTfmrzBLEmh4j93MbI/edit?usp=sharing" target="_blank">
+	        	<u>Resume</u>
+	        </a>
 </p>
 			<!-- Social Media -->
 			<a href="https://github.com/ChrisL108"><i class="fa fa-github-square fa-2x"></i></a>
@@ -32,9 +48,12 @@
 	    </div>
 	    <!-- Collapsable Header -->
 	    <div class="navbar navbar-dark bg-inverse navbar-static-top">
-	    	<img alt="source-design-logo" class="navbar-brand" src="img/source-logo.png" width="100">
+	    	<img alt="source-design-logo" class="navbar-brand img-fluid" src="img/source-logo.png" width="120">
 	    	<!-- person icon  -->
-	        <i class="fa fa-user fa-lg navbar-toggler btn pull-right" data-toggle="collapse" data-target="#navbar-header" aria-hidden="true"></i>
+	        <p class="navbar-toggler btn pull-right" data-toggle="collapse" data-target="#navbar-header" aria-hidden="true">
+	        	My Info
+	        </p>
+
 	    </div>
 	</nav>
 
@@ -43,7 +62,8 @@
 		<div class="container-fluid">
 			<!-- Header Title -->
 			<h1 id="site-title" class="display-3 text-sm-center">WEB <span class="text-muted">DESIGNER</span> &amp; DEVELOPER</h1>
-			<!-- <button id="work-link" class="btn btn-lg"><a href="#recent-work-heading">My Work</a></button> -->
+			<!-- my work link -->
+			<a id="work-link" href="#recent-work-heading" class="btn btn-lg">Recent Work</a>
 			<!-- Astronaut -->
 			<div id="astronaut">
 				<img src="img/astronaut-cutout.png" alt="astronaut floating around">
@@ -75,10 +95,10 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div id="about">
-				<div class="col-md-6 col-sm-12">
-					<h1 class="text-muted display-4 font-italic" id="about_text">Hey there!</h1>
-					<h1 class="text-muted display-3" id="about_text2">I <span class="text-info">design</span> &amp; <span class="text-info">build</span> custom websites!</h1>
-					<h1 class="display-4 font-white" style="color:white;" id="about_text3">Check it out!</h1>
+				<div class="col-md-12 col-lg-6">
+					<h1 class="text-muted display-6 font-italic" id="about_text">Hey there!</h1>
+					<h1 class="text-muted display-3" id="about_text2">I <span class="text-info">design</span> &amp; <span class="text-info">build</span> custom websites and apps!</h1>
+					<h1 class="display-5 font-white" style="color:white;" id="about_text3">check out my work!</h1>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<img src="img/me-in-suit.png" alt="astronaught" class="img-fluid pull-sm-right hidden-md-down">
@@ -261,6 +281,7 @@
 
 						<hr class="divider"> <!-- _____Divider____ -->
 
+
 	<div class="row">
 
 	<!-- Photoshop Sites -->
@@ -271,16 +292,17 @@
 					<h2>Landing Page Designs</h2>
 				</div>
 				<!-- image -->
-				<div class="col-md-6 col-sm-12">
-					<img class="img-fluid project-imgs" src="img/proshade-crop.jpg" data-toggle="modal" data-target="#proshade-modal" alt="Source weather live weather app">
+				<div class="col-md-5 col-sm-12">
+					<img class="img-fluid project-imgs" width="70%" src="img/proshade-crop.jpg" data-toggle="modal" data-target="#proshade-modal" alt="Source weather live weather app">
 				</div>
+								<!-- I used photoshop -->
+				<div class="col-sm-2 project-tech">
+					<img src="img/social/photoshop.png" alt="I used photoshop for website landing page designs" style="margin:6rem auto;">
+				</div>
+
 				<!-- title / tech -->
-				<div class="col-md-6 col-sm-12">
-					<img class="img-fluid project-imgs" src="img/proteus.jpg" data-toggle="modal" data-target="#proteus-modal" alt="Source weather live weather app">
-				</div>
-				<!-- I used photoshop -->
-				<div class="col-sm-12 project-tech">
-					<img src="img/social/photoshop.png" alt="I used photoshop for website landing page designs">
+				<div class="col-md-5 col-sm-12">
+					<img class="img-fluid project-imgs" width="70%" src="img/proteus.jpg" data-toggle="modal" data-target="#proteus-modal" alt="Source weather live weather app">
 				</div>
 				<!-- Proshade Modal -->
 				<div class="modal fade" id="proshade-modal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -310,6 +332,20 @@
 		</div> <!-- .row -->
 
 	</div> <!-- #projects & .container -->
+
+
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-xs-center">
+				<p>&copy; 2016 Christopher Lacaille</p>
+			</div>
+<!-- 			<div class="col-md-6 text-xs-center">
+				<a id="to-top" href="#navbar-header">Back to Top</a>
+			</div> -->
+		</div>
+	</div>	
+	</footer>
 
 
 <!-- Bootstrap & jQuery CDN's -->
