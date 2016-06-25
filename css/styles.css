@@ -253,6 +253,7 @@ footer {
 	#recent-work-heading h1 {
 		font-size: 4rem;
 	}
+
 }
 @media (max-width: 61rem) { 	
 
@@ -266,6 +267,11 @@ footer {
 
 @media (min-width: 62em) { 	
 
+}
+@media (max-width: 74em) { 	
+	#about img {
+	    height: 29rem;
+	}
 }
 
 /*Extra large devices (large desktops, 75em and up)*/
