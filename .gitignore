@@ -1,4 +1,6 @@
 
+.htaccess
+
 img/exclude/
 
 #OS junk files
