@@ -243,17 +243,25 @@ footer {
  Small devices (landscape phones, 34em and up)
  */
 
-@media (min-width: 34em) { 	
-
+/* 34em = 544px & up*/
+@media (max-width: 587px) { 	
+	#recent-work-heading h1 {
+		font-size: 2.3rem;
+	}
+	#about h1 {
+		font-size: 3rem;
+	}
 }
 
-/*Medium devices (tablets, 48em and up)*/
-@media (max-width: 48em) { 
+/*Medium devices (tablets, 768px and up)*/
+/* 48rem = 768px & down */
+@media (min-width: 588px) and (max-width: 48em) { 
 	#recent-work-heading h1 {
 		font-size: 4rem;
 	}
 
 }
+/* 61rem = 976px & down */
 @media (max-width: 61rem) { 	
 
 	.jumbotron h1 {
@@ -263,10 +271,11 @@ footer {
 }
 
 /*Large devices (desktops, 62em and up)*/
-
+/* 62rem = 992px & up */
 @media (min-width: 62em) { 	
 
 }
+/* 74rem = 1184px & down*/
 @media (max-width: 74em) { 	
 	#about img {
 	    height: 29rem;
@@ -274,6 +283,6 @@ footer {
 }
 
 /*Extra large devices (large desktops, 75em and up)*/
-
+/* 75rem = 1200px  & up */
 @media (min-width: 75em) { 	
 }
