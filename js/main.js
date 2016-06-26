@@ -2,30 +2,33 @@
 
 $(function() {
 
-// Astronaut animation
-var astronaut = $("#astronaut"), $window = $(window);
-var mouseX = mouseY = xp = yp = 0;
+var $title = $('#site-title');
+var $titleSpan = $(".jumbotron span");
+var $jumbotron = $(".jumbotron");
 
-$(".jumbotron").mousemove( function(e) {
+// Astronaut animation
+var astronaut = $("#astronaut");
+var $window = $(window);
+var mouseX = mouseY = xp = yp = 0;
+// global jumborton
+$jumbotron.mousemove( function(e) {
    mouseX = e.pageX ;
    mouseY = e.pageY - 50; 
 });
-
 // Loop over astronaut Tween animation
 // setInterval & Tween ( or css() ) is smoother than animation()
 var loop = setInterval(function(){
-	// Damper on 15 .. can change ... higher is slower
+	// Damper on 13 .. can change ... higher is slower
 	xp += (mouseX - xp) / 13;
 	yp += (mouseY - yp) / 13;
-
     if ( xp > 50 && xp < ($window.width() - 150) && yp > 0 && yp < 460) {
-    	TweenLite.to(astronaut, 1.5, {
-    				left:xp, top:yp, 
-    				opacity: 1} );
+    	TweenLite.to(astronaut, 1.5, 
+    				{ left:xp, top:yp, 
+    				  opacity: 1  });
     } else {
-    	TweenLite.to(astronaut, 1.2, {
-    				left:xp, top:yp,
-    				opacity: 0} );
+    	TweenLite.to(astronaut, 1.2, 
+    				{ left:xp, top:yp,
+    				  opacity: 0  });
     }
 }, 33);
 
@@ -49,15 +52,8 @@ $window.on('scroll', function() {
 
 });
 
-// $("#to-top").on('click', function(event) {
-// 	event.preventDefault();
-// 	$(‘html, body’).animate({scrollTop: 0});
-// 	return false;
-// });
-
-// smoother scrolling
-$(document).ready(function(){
-	$('a[href*=#]').click(function() {
+// Smoother scrolling  <a [href="#ID_NAME"] > elements
+$('a[href*=#]').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 			&& location.hostname == this.hostname) {
 				var $target = $(this.hash);
@@ -71,10 +67,10 @@ $(document).ready(function(){
 				}
 		}
 	});
-});
 
 
 });   // end ready())
+
 
 
 
