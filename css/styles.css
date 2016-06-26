@@ -286,3 +286,10 @@ footer {
 /* 75rem = 1200px  & up */
 @media (min-width: 75em) { 	
 }
+
+
+/*updating defaults*/
+
+.text-info {
+    color: #b1ffff !important;
+} 
