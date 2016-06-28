@@ -21,7 +21,7 @@ var loop = setInterval(function(){
 	// Damper on 13 .. can change ... higher is slower
 	xp += (mouseX - xp) / 13;
 	yp += (mouseY - yp) / 13;
-    if ( xp > 50 && xp < ($window.width() - 150) && yp > 0 && yp < 460) {
+    if ( xp > 50 && xp < ($window.width() - 150) && yp > 0 && yp < 510) {
     	TweenLite.to(astronaut, 1.5, 
     				{ left:xp, top:yp, 
     				  opacity: 1  });
