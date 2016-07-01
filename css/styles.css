@@ -59,14 +59,16 @@ a:hover,a:active {
 	text-shadow: 2px 1px #F4AD4E;
 }
 a#work-link {
-    background-color: #333e47;
-    border: 1px outset #9ee4e4;
-    margin-top: 400px;
-    color: #9ee4e4;
-}
-a#work-link:hover {
     background-color: #37424c;
     border: 2px solid #9ee4e4;
+    
+    margin-top: 400px;
+    color: #9ee4e4;
+    z-index: 2;
+}
+a#work-link:hover {
+	background-color: #333e47;
+    border: 1px outset #9ee4e4;
     /* box-shadow: 1px 2px 5px #fddc68; */
 }
 
@@ -85,6 +87,7 @@ a:hover, a:active, a:visited {
 	-moz-animation:    spin 8s infinite alternate; 
 	-o-animation:      spin 8s infinite alternate; 
 	animation:         spin 8s infinite alternate;
+	z-index: 10;
 }
 
 /* ~~~~~ What-I-Do Section */
