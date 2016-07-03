@@ -127,6 +127,12 @@ a:hover, a:active, a:visited {
 	height: 35rem;
 	overflow: hidden;
 }
+#about #about_text {
+	color: white;
+}
+#about h1#about_text2 {
+    text-shadow: 5px 5px 6px #000000;
+}
 
 /*~~~~ RECENT WORK*/
 #recent-work-heading {
@@ -153,7 +159,8 @@ a:hover, a:active, a:visited {
 #projects {
 	padding: 2rem;
 	margin-top: 0;
-	background-image: url(../img/patterns/abstract.png);
+	/*background-image: url(../img/patterns/abstract.png);*/
+	background-image: url(../img/patterns/dark-gray-tile.png);
 	background-repeat: repeat;
 	background-attachment: scroll;
 }
