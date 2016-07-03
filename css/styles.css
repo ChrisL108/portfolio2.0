@@ -43,7 +43,8 @@ a:hover,a:active {
 /* Jumbotron */
 .jumbotron {
 	position: relative;
-	background-image: url(../img/space2.jpg);
+	/*background-image: url(../img/space2.jpg);*/
+	background-image: url(../img/patterns/mountains-space.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position:50% 8%;
@@ -137,6 +138,7 @@ a:hover, a:active, a:visited {
 /*~~~~ RECENT WORK*/
 #recent-work-heading {
     color: #09101c;
+    height: 240px;
     height: 15rem;
     border-bottom: 5px outset gray;
     border-radius: 0;
