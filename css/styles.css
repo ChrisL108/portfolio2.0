@@ -209,6 +209,10 @@ a:hover, a:active, a:visited {
 .modal a:hover {
 	text-decoration: none;
 }
+h1.modal-title {
+	padding: 0;
+	margin: 0;
+}
 .modal-dialog {
     background-color: rgba(175, 175, 175, 0.26);
     padding: 1rem;
@@ -221,6 +225,15 @@ a:hover, a:active, a:visited {
     padding: 1rem;
     background-color: #2f2f2f;
     color: cornflowerblue;
+}
+.modal .site-links {
+    background-color: #545454;
+}
+.site-links a {
+	color: white;
+}
+.site-links a:hover {
+	color: cornflowerblue;
 }
 /* onepass */
 #projects #onepass {
