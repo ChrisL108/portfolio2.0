@@ -20,10 +20,15 @@ var loop = setInterval(function(){
 	// Damper on 13 .. can change ... higher is slower
 	xp += (mouseX - xp) / 13;
 	yp += (mouseY - yp) / 13;
-    if ( xp > 50 && xp < ($window.width() - 150) && yp > 0 && yp < 510) {
+    if ( xp > 50 && 
+		 xp < ($window.width() - 150) && 
+		 yp > 0 && 
+		 yp < 510) 
+    {
     	TweenLite.to(astronaut, 1.5, 
     				{ left:xp, top:yp, 
     				  opacity: 1  });
+    	// TweenLite.set(astronaut, {className: '+=contrast100'});
     } else {
     	TweenLite.to(astronaut, 1.2, 
     				{ left:xp, top:yp,
@@ -53,8 +58,8 @@ $window.on('scroll', function() {
 
 // Smoother scrolling  <a [href="#ID_NAME"] > elements
 $('a[href*=#]').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-			&& location.hostname == this.hostname) {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && 
+			location.hostname == this.hostname) {
 				var $target = $(this.hash);
 				$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
 				if ($target.length) {
