@@ -1,15 +1,20 @@
 
 $(function() {
 
-var $title = $('#site-title');
-var $titleSpan = $(".jumbotron span");
-var $jumbotron = $(".jumbotron");
-
+var $title = $('#site-title'),
+	$titleSpan = $(".jumbotron span"),
+	$jumbotron = $(".jumbotron"),
+	$about = $("#about"), 
+	$about_text = $('#about_text'),
+	$about_text2 = $('#about_text2'), 
+	$about_text3 = $('#about_text3'),
+	$projectImgs = $('.project-imgs');
 // Astronaut animation
 var astronaut = $("#astronaut");
 var $window = $(window);
 var mouseX = mouseY = xp = yp = 0;
-// global jumborton
+
+// global jumbotron
 $jumbotron.mousemove( function(e) {
    mouseX = e.pageX ;
    mouseY = e.pageY - 50; 
@@ -36,12 +41,9 @@ var loop = setInterval(function(){
     }
 }, 33);
 
-// SKILLS SECTION
-var $about = $("#about"), $about_text = $('#about_text'),
-		$about_text2 = $('#about_text2'), $about_text3 = $('#about_text3');
 
+// ABOUT SECTION
 $window.on('scroll', function() {
-
 	if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
 		$about_text.fadeIn(300, function() { 
 			$about_text2.fadeIn(1100, function() {
@@ -53,10 +55,16 @@ $window.on('scroll', function() {
 		$about_text2.hide();
 		$about_text3.hide();
 	}
-
 });
 
-// Smoother scrolling  <a [href="#ID_NAME"] > elements
+$projectImgs.on('mouseover', function() {
+	TweenLite.set($(this), {className: '+=contrast200'})
+});
+$projectImgs.on('mouseleave', function() {
+	TweenLite.set($(this), {className: '-=contrast200'})
+});
+
+// Smoother scrolling 
 $('a[href*=#]').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && 
 			location.hostname == this.hostname) {
