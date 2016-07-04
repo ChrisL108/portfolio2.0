@@ -58,10 +58,10 @@ $window.on('scroll', function() {
 });
 
 $projectImgs.on('mouseover', function() {
-	TweenLite.set($(this), {className: '+=contrast200'})
+	TweenLite.set($(this), {className: '+=contrast200'});
 });
 $projectImgs.on('mouseleave', function() {
-	TweenLite.set($(this), {className: '-=contrast200'})
+	TweenLite.set($(this), {className: '-=contrast200'});
 });
 
 // Smoother scrolling 
