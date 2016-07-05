@@ -90,8 +90,6 @@ a:hover, a:active, a:visited {
 	-o-animation:      spin 8s infinite alternate; 
 	animation:         spin 8s infinite alternate;
 	z-index: 10;
-	-webkit-transition:-webkit-filter 1s, filter 1s;
-  		transition:filter 1s;
 }
 
 /* ~~~~~ What-I-Do Section */
@@ -202,6 +200,8 @@ a:hover, a:active, a:visited {
 	height: 20rem;*/
 	margin: 3rem auto;
 	border: 2px solid gray;
+	-webkit-transition: all 1s;
+		transition: all 1s;
 }
 .modal {
 	background-color: #111;
@@ -249,27 +249,10 @@ footer {
     background-color: #bff0ff;
     padding: 1rem;
 }
-
-/* Contrast settings */
-.contrast0 {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.01" intercept="0.495" /><feFuncG type="linear" slope="0.01" intercept="0.495" /><feFuncB type="linear" slope="0.01" intercept="0.495" /></feComponentTransfer></filter></svg>#filter');
-  -webkit-filter: contrast(0%);
-          filter: contrast(0%);
-}
-.contrast50 {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.5" intercept="0.25" /><feFuncG type="linear" slope="0.5" intercept="0.25" /><feFuncB type="linear" slope="0.5" intercept="0.25" /></feComponentTransfer></filter></svg>#filter');
-  -webkit-filter: contrast(50%);
-          filter: contrast(50%);
-}
-.contrast100 {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" intercept="0" /><feFuncG type="linear" slope="1" intercept="0" /><feFuncB type="linear" slope="1" intercept="0" /></feComponentTransfer></filter></svg>#filter');
-  -webkit-filter: contrast(100%);
-          filter: contrast(100%);
-}
-.contrast200 {
-	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="2" intercept="-0.5" /><feFuncG type="linear" slope="2" intercept="-0.5" /><feFuncB type="linear" slope="2" intercept="-0.5" /></feComponentTransfer></filter></svg>#filter');
-  -webkit-filter: contrast(200%);
-          filter: contrast(200%);
+.contrast150 {
+	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.5" intercept="-0.25" /><feFuncG type="linear" slope="1.5" intercept="-0.25" /><feFuncB type="linear" slope="1.5" intercept="-0.25" /></feComponentTransfer></filter></svg>#filter');
+	-webkit-filter: contrast(150%);
+	  filter: contrast(150%);
 }
 .blur {
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
