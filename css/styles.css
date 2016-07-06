@@ -213,13 +213,14 @@ h1.modal-title {
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
-    border: 7px inset #d2d2d2;
+    border: 1px inset #d2d2d2;
     color: #c5c5c5;
 }
 .modal-content {
     padding: 1rem;
     background-color: #494949;
     color: cornflowerblue;
+    border: 10px inset #7b7b7b;
 }
 .modal .site-links {
     background-color: #545454;
