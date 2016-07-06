@@ -132,6 +132,8 @@ a:hover, a:active, a:visited {
 }
 #about h1#about_text2 {
     text-shadow: 5px 5px 6px #000000;
+    border-left: 4px solid black;
+    padding-left: 1rem;
 }
 
 /*~~~~ RECENT WORK*/
