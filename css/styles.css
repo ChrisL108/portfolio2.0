@@ -3,15 +3,10 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
-	/*font-family: 'Arimo', sans-serif;*/
 }
 nav {
 	margin: 0;
 	padding: 0;
-}
-/* Font for nav and jumbotron */
-nav, .jumbotron {
-	/*font-family: 'Orbitron', sans-serif;*/
 }
 nav a {
 	color: #eceeef;
@@ -23,7 +18,6 @@ a:hover,a:active {
     border-radius: 0;
     position: relative;
 }
-
 
  /* Navbar collapsable-content button */
 .navbar-toggler {
@@ -154,15 +148,10 @@ a:hover, a:active, a:visited {
 	line-height: 0;
 	color:#333;
 }
-#recent-work-heading i {
-	display: inline-block;
-}
-
 /* ~~~~~~~~~ PROJECTS */
 #projects {
 	padding: 2rem;
 	margin-top: 0;
-	/*background-image: url(../img/patterns/abstract.png);*/
 	background-image: url(../img/patterns/dark-gray-tile.png);
 	background-repeat: repeat;
 	background-attachment: scroll;
@@ -196,8 +185,6 @@ a:hover, a:active, a:visited {
 	margin: 0 auto;
 }
 .project-imgs {
-/*	width: 35rem;
-	height: 20rem;*/
 	margin: 3rem auto;
 	border: 2px solid gray;
 	-webkit-transition: all 1s;
@@ -251,6 +238,7 @@ footer {
     background-color: #bff0ff;
     padding: 1rem;
 }
+/* FILTERS */
 .contrast150 {
 	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.5" intercept="-0.25" /><feFuncG type="linear" slope="1.5" intercept="-0.25" /><feFuncB type="linear" slope="1.5" intercept="-0.25" /></feComponentTransfer></filter></svg>#filter');
 	-webkit-filter: contrast(150%);
@@ -294,26 +282,35 @@ footer {
  Small devices (landscape phones, 34em and up)
  */
 
-/* 34em = 544px & up*/
-@media (max-width: 587px) { 	
+/* 34em = 544px & downb*/
+@media (max-width: 35.9em) { 	
 	#recent-work-heading h1 {
-		font-size: 2.3rem;
+		font-size: 2.5rem;
+		padding: 2rem 0 0 0;
+	}
+	#about {
+		padding: 2.5rem;
 	}
 	#about h1 {
 		font-size: 3rem;
 	}
+	#about h1#about_text2 {
+	    border-left: none; 
+	    padding: 1rem 0 0 0;
+	}
+
 }
 
 /*Medium devices (tablets, 768px and up)*/
 /* 48rem = 768px & down */
-@media (min-width: 588px) and (max-width: 48em) { 
+@media (min-width: 36em) and (max-width: 48em) { 
 	#recent-work-heading h1 {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 
 }
 /* 61rem = 976px & down */
-@media (max-width: 61rem) { 	
+@media (max-width: 61.5em) { 	
 	.jumbotron h1 {
 		font-size: 3rem;
 	}
@@ -326,7 +323,7 @@ footer {
 
 }
 /* 74rem = 1184px & down*/
-@media (max-width: 74em) { 	
+@media (max-width: 74em) and (min-width: 62em) { 	
 	#about img {
 	    height: 28rem;
 	    margin-top: 7rem;
@@ -343,7 +340,7 @@ footer {
 }
 
 
-/*updating defaults*/
+/*updating bootstrap defaults*/
 
 .text-info {
     color: #b1ffff !important;
