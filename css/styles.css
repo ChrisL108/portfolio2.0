@@ -237,6 +237,35 @@ h1.modal-title {
 .site-links a:hover {
 	color: cornflowerblue;
 }
+
+/*FORM*/
+#contact-form {
+    background-image: radial-gradient( #50575c, #2d4e5a);
+    color: #b1ffff;
+    padding: 2rem;
+}
+#contact-form p {
+	color: white;
+	padding: 0.5rem;
+}
+#contact-form label {
+	padding: 0.7rem;
+}
+#contact-form button {
+    background-color: #37424c;
+    border: 2px solid #9ee4e4;
+    color: #9ee4e4;
+}
+#contact-form button:hover {
+	background-color: #333e47;
+    border: 1px outset #9ee4e4;
+}
+.form-group.required .control-label:after { 
+    color: #d00;
+    content: "*";
+}
+
+
 footer {
     border: 5px inset dimgray;
     background-color: #bff0ff;
