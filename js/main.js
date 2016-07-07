@@ -1,6 +1,8 @@
 
 $(function() {
 
+$(document).scrollTop(88);
+
 var $title = $('#site-title'),
 	$titleSpan = $(".jumbotron span"),
 	$jumbotron = $(".jumbotron"),
@@ -28,7 +30,7 @@ var loop = setInterval(function(){
     if ( xp > 50 && 
 		 xp < ($window.width() - 150) && 
 		 yp > 0 && 
-		 yp < 510) 
+		 yp < 430) 
     {
     	TweenLite.to(astronaut, 1.5, 
     				{ left:xp, top:yp, 

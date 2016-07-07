@@ -3,6 +3,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'PT Serif', serif;*/
 }
 nav {
 	margin: 0;
@@ -43,6 +44,8 @@ a:hover, a:active, a:visited, a:focus {
 	background-position:50% 8%;
 	height: 600px;
 	height: 37.5rem;
+	height: 100%;
+	width: 100%;
 	margin-bottom: 0;
 	border-bottom: 2px solid #4E4E4E;
 	overflow: hidden;
@@ -258,8 +261,8 @@ footer {
           filter: blur(10px);
 }
 .slow-spin {
-  -webkit-animation: fa-spin 5s infinite linear;
-  animation: fa-spin 5s infinite linear;
+  -webkit-animation: fa-spin 4s infinite linear;
+  animation: fa-spin 4s infinite linear;
 }
 /* spin keyframes for Astronaught */
 @keyframes spin {
@@ -314,6 +317,9 @@ footer {
 @media (max-width: 61.5em) { 	
 	.jumbotron h1 {
 		font-size: 3rem;
+	}
+	html, body {
+		font-size: 14px;
 	}
 
 }
