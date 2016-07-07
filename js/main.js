@@ -1,8 +1,6 @@
 
 $(function() {
 
-$(document).scrollTop(88);
-
 var $title = $('#site-title'),
 	$titleSpan = $(".jumbotron span"),
 	$jumbotron = $(".jumbotron"),
