@@ -56,7 +56,7 @@ a:hover, a:active, a:visited, a:focus {
 }
 a#work-link {
     background-color: #37424c;
-    border: 2px solid #9ee4e4;
+    border: 1px outset #9ee4e4;
     
     margin-top: 300px;
     color: #9ee4e4;
@@ -64,7 +64,7 @@ a#work-link {
 }
 a#work-link:hover {
 	background-color: #333e47;
-    border: 1px outset #9ee4e4;
+    border: 1px solid #9ee4e4;
     /* box-shadow: 1px 2px 5px #fddc68; */
 }
 
@@ -251,14 +251,14 @@ h1.modal-title {
 #contact-form label {
 	padding: 0.7rem;
 }
-#contact-form button {
+#contact-form input {
     background-color: #37424c;
-    border: 2px solid #9ee4e4;
-    color: #9ee4e4;
-}
-#contact-form button:hover {
-	background-color: #333e47;
     border: 1px outset #9ee4e4;
+    color: lightgray;
+}
+#contact-form input:hover {
+	background-color: #333e47;
+    border: 1px solid #9ee4e4;
 }
 .form-group.required .control-label:after { 
     color: #d00;
