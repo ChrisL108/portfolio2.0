@@ -65,6 +65,41 @@ $projectImgs.on('mouseleave', function() {
 	TweenLite.set($(this), {className: '-=contrast150'});
 });
 
+
+var contactForm = $('form'),
+	userName = $('#userName'),
+	userEmail = $('#userEmail'),
+	userMsg = $('#userMsg');
+
+$('form').on('submit', function(e) {
+	e.preventDefault();
+	// alert("Thanks! I'll get back to you as soon as possible.");
+	console.log(userName.val(), userEmail.val(), userMsg.val());
+	contactForm.serialize();
+	$.ajax({
+		url: "contactForm.attr('action')",
+		type: 'POST',
+		data: {name: userName.val(),
+			   email: userEmail.val(),
+			   message: userMsg.val()
+		},
+	})
+	.done(function() {
+		console.log("success");
+
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+	
+});
+
+
+
+
 // Smoother scrolling 
 $('a[href*=#]').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && 
