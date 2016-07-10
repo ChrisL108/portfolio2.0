@@ -21,7 +21,8 @@ var contactForm = $('form'),
 	$formMessages = $('#form-messages');
 
 // Smoother scrolling 
-$('a[href*=#]').click(function() {
+smoothScroll =  function() {
+	$('a[href*=#]').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && 
 			location.hostname == this.hostname) {
 				var $target = $(this.hash);
@@ -34,6 +35,7 @@ $('a[href*=#]').click(function() {
 				}
 		}
 	});
+}
 
 
 // global jumbotron
