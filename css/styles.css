@@ -338,7 +338,7 @@ footer {
 /* 48rem = 768px & down */
 @media (min-width: 36em) and (max-width: 48em) { 
 	#recent-work-heading h1 {
-		font-size: 3rem;
+		font-size: 6rem;
 	}
 
 }
