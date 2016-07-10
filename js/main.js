@@ -86,11 +86,22 @@ $('form').on('submit', function(e) {
 	})
 	.done(function() {
 		console.log("success");
+		userName.val('');
+		userEmail.val('');
+		userMsg.val('');
+
 
 	})
-	.fail(function() {
-		console.log("error");
-	})
+	.fail(function(data) {
+		console.log("error sending form data...");
+
+	    // Set the message text.
+	    if (data.responseText !== '') {
+	        $(formMessages).text(data.responseText);
+	    } else {
+	        $(formMessages).text('Oops! An error occured and your message could not be sent.');
+	    }
+		})
 	.always(function() {
 		console.log("complete");
 	});
