@@ -10,9 +10,31 @@ var $title = $('#site-title'),
 	$about_text3 = $('#about_text3'),
 	$projectImgs = $('.project-imgs');
 // Astronaut animation
-var astronaut = $("#astronaut");
-var $window = $(window);
-var mouseX = mouseY = xp = yp = 0;
+var astronaut = $("#astronaut"),
+	$window = $(window),
+	mouseX = mouseY = xp = yp = 0;
+// Ajax form variables
+var contactForm = $('form'),
+	userName = $('#userName'),
+	userEmail = $('#userEmail'),
+	userMsg = $('#userMsg');
+	$formMessages = $('#form-messages');
+
+// Smoother scrolling 
+$('a[href*=#]').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && 
+			location.hostname == this.hostname) {
+				var $target = $(this.hash);
+				$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+				if ($target.length) {
+					var targetOffset = $target.offset().top;
+					$('html,body')
+						.animate({scrollTop: targetOffset}, 1000);
+					return false;
+				}
+		}
+	});
+
 
 // global jumbotron
 $jumbotron.mousemove( function(e) {
@@ -66,12 +88,6 @@ $projectImgs.on('mouseleave', function() {
 });
 
 
-var contactForm = $('form'),
-	userName = $('#userName'),
-	userEmail = $('#userEmail'),
-	userMsg = $('#userMsg');
-	$formMessages = $('#form-messages');
-
 // FORM AJAX REQUEST
 $('form').on('submit', function(e) {
 	e.preventDefault();
@@ -114,20 +130,7 @@ $('form').on('submit', function(e) {
 
 
 
-// Smoother scrolling 
-$('a[href*=#]').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && 
-			location.hostname == this.hostname) {
-				var $target = $(this.hash);
-				$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-				if ($target.length) {
-					var targetOffset = $target.offset().top;
-					$('html,body')
-						.animate({scrollTop: targetOffset}, 1000);
-					return false;
-				}
-		}
-	});
+
 
 
 });   // end ready())

@@ -44,23 +44,32 @@ a:hover, a:active, a:visited, a:focus {
 	background-position:50% 8%;
 	height: 600px;
 	height: 37.5rem;
-	height: 100%;
 	width: 100%;
 	margin-bottom: 0;
 	border-bottom: 2px solid #4E4E4E;
 	overflow: hidden;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+/* #site title */
 .jumbotron h1 {
 	text-shadow: 2px 1px #F4AD4E;
+	text-align: center;
 }
+
 a#work-link {
     background-color: #37424c;
     border: 1px outset #9ee4e4;
-    
-    margin-top: 300px;
+    text-shadow: none;
     color: #9ee4e4;
-    z-index: 2;
+    margin-top: 2.5rem;
+/*	margin-top: 300px;
+	position: absolute;
+	margin-left: 35%;*/
+	text-align: center;
+    align-self: flex-end;
 }
 a#work-link:hover {
 	background-color: #333e47;
@@ -308,6 +317,28 @@ textarea {
   100% {
     transform: rotate(50deg) ;
   }
+}
+/* TYPED.JS */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
 
 

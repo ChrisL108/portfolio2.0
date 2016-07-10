@@ -59,15 +59,18 @@
 	<!-- ~~~~~~~~~~~~~~~~~ Jumbotron -->
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container-fluid">
-			<!-- Header Title -->
-			<h1 id="site-title" class="display-3 text-sm-center">WEB <span class="text-muted">DESIGNER</span> &amp; DEVELOPER</h1>
-			<!-- my work link -->
-			<a id="work-link" href="#recent-work-heading" class="btn btn-lg">Recent Work</a>
-			<!-- Astronaut -->
-			<div id="astronaut">
-				<img src="img/astronaut-cutout.png" alt="astronaut floating around">
-			</div>
-		</div>
+			<div class="row">
+					<!-- Header Title -->
+					<!-- <h1 id="site-title" class="display-3 text-sm-center">WEB <span class="text-muted">DESIGNER</span> &amp; DEVELOPER</h1> -->
+					<h1 id="site-title" class="display-5 text-sm-center"></h1>
+					<!-- my work link -->
+					<!-- <a id="work-link" href="#recent-work-heading" class="btn btn-lg">Recent Work</a> -->
+					<!-- Astronaut -->
+					<div id="astronaut">
+						<img src="img/astronaut-cutout.png" alt="astronaut floating around">
+					</div>
+			</div><!-- row -->
+		</div> <!-- container -->
 	</div>  <!-- .jumbotron -->
 
 	<div id="what-i-do" class="container-fluid text-xs-center">
@@ -441,6 +444,23 @@
 <!-- Bootstrap & jQuery CDN's -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+
+<script src="js/typed.js"></script>
+<script>
+  $(function(){
+      $("#site-title").typed({
+        strings: ["My name is <span class='text-muted'>Chris LaCaille</span>",
+        		  "I <span class='text-muted'>design</span> websites... ^1000 and <span class='text-muted'>build</span> them",
+        		  "Check out my work!<br><a id='work-link' href='#recent-work-heading' class='btn btn-lg'>Recent Work</a>"
+        		  ],
+        typeSpeed: 10,
+        startDelay: 1000,
+        // callback: function() {}
+      });
+
+  });
+</script>
+
 <!-- Font Awesome -->
 <!-- <script src="https://use.fontawesome.com/f0471aa1ab.js"></script> -->
 
