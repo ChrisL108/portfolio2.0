@@ -70,14 +70,16 @@ var contactForm = $('form'),
 	userName = $('#userName'),
 	userEmail = $('#userEmail'),
 	userMsg = $('#userMsg');
+	$formMessages = $('#form-messages');
 
+// FORM AJAX REQUEST
 $('form').on('submit', function(e) {
 	e.preventDefault();
 	// alert("Thanks! I'll get back to you as soon as possible.");
 	console.log(userName.val(), userEmail.val(), userMsg.val());
 	contactForm.serialize();
 	$.ajax({
-		url: "contactForm.attr('action')",
+		url: contactForm.attr('action'),
 		type: 'POST',
 		data: {name: userName.val(),
 			   email: userEmail.val(),
@@ -86,6 +88,7 @@ $('form').on('submit', function(e) {
 	})
 	.done(function() {
 		console.log("success");
+		$formMessages.html("Message Sent.. Thank You! I'll get back to you ASAP.");
 		userName.val('');
 		userEmail.val('');
 		userMsg.val('');
@@ -97,9 +100,9 @@ $('form').on('submit', function(e) {
 
 	    // Set the message text.
 	    if (data.responseText !== '') {
-	        $(formMessages).text(data.responseText);
+	        $formMessages.html(data.responseText);
 	    } else {
-	        $(formMessages).text('Oops! An error occured and your message could not be sent.');
+	        $formMessages.html("Oops! An error occured and your message could not be sent.");
 	    }
 		})
 	.always(function() {

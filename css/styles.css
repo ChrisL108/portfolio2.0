@@ -271,6 +271,10 @@ footer {
     background-color: #bff0ff;
     padding: 1rem;
 }
+textarea {
+    resize: vertical;
+    color: gray;
+}
 /* FILTERS */
 .contrast150 {
 	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1.5" intercept="-0.25" /><feFuncG type="linear" slope="1.5" intercept="-0.25" /><feFuncB type="linear" slope="1.5" intercept="-0.25" /></feComponentTransfer></filter></svg>#filter');
