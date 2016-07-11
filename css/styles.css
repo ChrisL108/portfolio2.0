@@ -56,9 +56,9 @@ a:hover, a:active, a:visited, a:focus {
 }
 /* #site title */
 .jumbotron h1 {
-	color: black;
-	text-shadow: 1px 1px #F4AD4E;
-	text-align: center;
+	font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 a#work-link {
@@ -67,16 +67,12 @@ a#work-link {
     text-shadow: none;
     color: #9ee4e4;
     margin-top: 2.5rem;
-/*	margin-top: 300px;
-	position: absolute;
-	margin-left: 35%;*/
 	text-align: center;
     align-self: flex-end;
 }
 a#work-link:hover {
 	background-color: #333e47;
     border: 1px solid #9ee4e4;
-    /* box-shadow: 1px 2px 5px #fddc68; */
 }
 
 a:hover, a:active, a:visited {
@@ -142,6 +138,7 @@ a:hover, a:active, a:visited {
     text-shadow: 5px 5px 6px #000000;
     border-left: 4px solid black;
     padding-left: 1rem;
+    line-height: 5rem;
 }
 
 /*~~~~ RECENT WORK*/
