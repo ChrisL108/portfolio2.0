@@ -20,6 +20,18 @@ var contactForm = $('form'),
 	userMsg = $('#userMsg');
 	$formMessages = $('#form-messages');
 
+	$("#site-title").typed({
+		strings: ["My name is <span class='text-primary'>Chris LaCaille</span>",
+				  "I <span class='text-primary'>design</span> websites... ^600 and <span class='text-primary'>build</span> them",
+				  "Check out my work!<br><a id='work-link' href='#recent-work-heading' class='btn btn-lg'>Recent Work</a>"
+				  ],
+		typeSpeed: 0,
+		startDelay: 1000,
+		callback: function() {
+			smoothScroll();
+		}
+	});
+
 // Smoother scrolling 
 smoothScroll =  function() {
 	$('a[href*=#]').click(function() {
@@ -38,7 +50,7 @@ smoothScroll =  function() {
 }
 
 
-// global jumbotron
+// jumbotron mouse events
 $jumbotron.mousemove( function(e) {
    mouseX = e.pageX ;
    mouseY = e.pageY - 50; 
@@ -46,9 +58,9 @@ $jumbotron.mousemove( function(e) {
 // Loop over astronaut Tween animation
 // setInterval & Tween ( or css() ) is smoother than animation()
 var loop = setInterval(function(){
-	// Damper on 13 .. can change ... higher is slower
-	xp += (mouseX - xp) / 13;
-	yp += (mouseY - yp) / 13;
+	// Damper on 10 .. can change ... higher is slower
+	xp += (mouseX - xp) / 10;
+	yp += (mouseY - yp) / 10;
     if ( xp > 50 && 
 		 xp < ($window.width() - 150) && 
 		 yp > 0 && 
@@ -82,6 +94,7 @@ $window.on('scroll', function() {
 	}
 });
 
+// Project Imgs HOVER
 $projectImgs.on('mouseover', function() {
 	TweenLite.set($(this), {className: '+=contrast150'});
 });
@@ -91,6 +104,7 @@ $projectImgs.on('mouseleave', function() {
 
 
 // FORM AJAX REQUEST
+
 $('form').on('submit', function(e) {
 	e.preventDefault();
 	// alert("Thanks! I'll get back to you as soon as possible.");
@@ -129,7 +143,7 @@ $('form').on('submit', function(e) {
 	
 });
 
-
+// END AJAX
 
 
 

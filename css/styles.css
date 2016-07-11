@@ -38,7 +38,7 @@ a:hover, a:active, a:visited, a:focus {
 /* Jumbotron */
 .jumbotron {
 	position: relative;
-	background-image: url(../img/patterns/mountains-space.jpg);
+	background-image: url(../img/space3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position:50% 8%;
@@ -386,6 +386,9 @@ textarea {
 	}
 	html, body {
 		font-size: 14px;
+	}
+	#astronaught {
+		width: 100px;
 	}
 
 }
