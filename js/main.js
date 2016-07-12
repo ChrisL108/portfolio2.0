@@ -1,3 +1,5 @@
+// By: Chris LaCaille
+// ~~ My javascript/jquery code for my portfolio page - chrislacaille.com
 
 $(function() {
 
@@ -6,8 +8,7 @@ var $title = $('#site-title'),
 	$jumbotron = $(".jumbotron"),
 	$about = $("#about"), 
 	$about_text = $('#about_text'),
-	$about_text2 = $('#about_text2'), 
-	$about_text3 = $('#about_text3'),
+	$about_text2 = $('#about_text2'),
 	$projectImgs = $('.project-imgs');
 // Astronaut animation
 var astronaut = $("#astronaut"),
@@ -20,16 +21,20 @@ var contactForm = $('form'),
 	userMsg = $('#userMsg');
 	$formMessages = $('#form-messages');
 
+// jumbotron 'typed' animated text
 	$("#site-title").typed({
 		strings: ["My name is <span class='text-primary'>Chris LaCaille</span>",
 				  "I <span class='text-primary'>design</span> websites... ^600 and <span class='text-primary'>build</span> them",
 				  "Check out my work!<br><a id='work-link' href='#recent-work-heading' class='btn btn-lg'>Click Here</a>"
 				  ],
-		typeSpeed: 0,
-		startDelay: 1000,
-		callback: function() {
+		typeSpeed: 11,
+		startDelay: 2000,
+		cursorChar: "loading...",
+		callback: function(e) {
 			smoothScroll();
-		}
+			$('.typed-cursor').fadeOut();
+		},
+		
 	});
 
 // Smoother scrolling 
@@ -56,8 +61,9 @@ $jumbotron.mousemove( function(e) {
    mouseX = e.pageX ;
    mouseY = e.pageY - 50; 
 });
+
 // Loop over astronaut Tween animation
-// setInterval & Tween ( or css() ) is smoother than animation()
+// setInterval & Tween ( or css() ) is much smoother than animate()
 var loop = setInterval(function(){
 	// Damper on 10 .. can change ... higher is slower
 	xp += (mouseX - xp) / 10;
@@ -70,29 +76,22 @@ var loop = setInterval(function(){
     	TweenLite.to(astronaut, 1.5, 
     				{ left:xp, top:yp, 
     				  opacity: 1  });
-    	
     } else {
     	TweenLite.to(astronaut, 1.2, 
     				{ left:xp, top:yp,
     				  opacity: 0  });
     }
-
 }, 100);
 
-
-// ABOUT SECTION
+// hide 'about' text that will fade in on scroll()
+$about_text.hide();
+$about_text2.hide();
 $window.on('scroll', function() {
 	if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
-		$about_text.fadeIn(300, function() { 
-			$about_text2.fadeIn(1100, function() {
-				$about_text3.fadeIn(300);
-			});
+		$about_text.fadeIn(1000, function() {
+			$about_text2.fadeIn(2000);
 		});
-	} else {
-		$about_text.hide();
-		$about_text2.hide();
-		$about_text3.hide();
-	}
+	} 
 });
 
 // Project Imgs HOVER
@@ -104,7 +103,7 @@ $projectImgs.on('mouseleave', function() {
 });
 
 
-// FORM AJAX REQUEST
+// Contact form - AJAX
 
 $('form').on('submit', function(e) {
 	e.preventDefault();
@@ -125,8 +124,6 @@ $('form').on('submit', function(e) {
 		userName.val('');
 		userEmail.val('');
 		userMsg.val('');
-
-
 	})
 	.fail(function(data) {
 		console.log("error sending form data...");

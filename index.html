@@ -29,23 +29,7 @@
 </head>
 <body>
 
-	<nav>
-		<!-- Collapsable Header -->
-<!-- 	    <div class="collapse text-xs-center" id="navbar-header">
-	      <div class="container-fluid bg-inverse p-a-1">
-	        <h3 class="display-4">Chris LaCaille</h3>
-	        <a href="mailto:chrislacaille5@gmail.com" target="_top">chrislacaille5@gmail.com</a><br>
-	        <a href="resume.pdf" target="_blank">
-	        	<u>Resume</u>
-	        </a>
-			</br>
-			<a href="https://github.com/ChrisL108"><i class="fa fa-github-square fa-2x"></i></a>
-	        <a href="https://twitter.com/chrislacaille5"><i class="fa fa-twitter-square fa-2x"></i></a>
-	        <a href="https://www.linkedin.com/in/christopher-lacaille-752bb789?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin-square fa-2x"></i></a>
-	        <a href="https://www.facebook.com/clacaille1"><i class="fa fa-facebook-square fa-2x"></i></a>
-	      </div>
-	    </div> -->
-	    
+	<nav>	    
 	    <div class="navbar navbar-dark bg-inverse navbar-static-top">
 	    	<!-- <img alt="source-design-logo" class="navbar-brand img-fluid" src="img/source-logo.png" width="120"> -->
 	    	<h1 class="navbar-brand pull-left display-2">Chris Lacaille<br><small class="text-muted">Front-End Developer</small></h1>
@@ -56,7 +40,7 @@
 	        </p> -->
 			  <ul class="nav navbar-nav pull-right">
 			    <li class="nav-item">
-			      <a class="nav-link" href="#what-i-do">About</a>
+			      <a class="nav-link" href="#about">About</a>
 			    </li>
 			    <li class="nav-item">
 			      <a class="nav-link" href="#recent-work-heading">Projects</a>
@@ -65,7 +49,6 @@
 			      <a class="nav-link" href="#contact-form">Contact</a>
 			    </li>
 			  </ul>
-
 	    </div>
 	</nav>
 
@@ -107,13 +90,18 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div id="about">
-				<div class="col-md-12 col-lg-6">
-					<h1 class="display-6 font-italic m-b-2" id="about_text">Hey there...</h1>
-					<h1 class="text-muted display-4" id="about_text2">My name's Chris. I have a <span class="text-info">passion</span> for web design &amp; coding.</h1>
-					<h1 class="display-5 font-white hidden-xs-down m-t-2" style="color:white;" id="about_text3">Let's join forces!</h1>
+				<div class="col-lg-12 col-xl-6">
+					<h5 class="text-muted" id="about_text">I am a self-taught <span class="text-info">Front-End Developer</span> from Austin, TX... For me there are few things that engross me like making something complex into something fun and intriguing.</h5>
+					<aside class="hidden-xs-down" id="about_text2">
+						<h2 class="display-5 text-info">What I do when I'm not coding..</h2>
+						<i class="fa fa-motorcycle fa-5x" aria-hidden="true"></i>
+						<i class="fa fa-book fa-5x" aria-hidden="true"></i>
+						<i class="fa fa-dribbble fa-5x" aria-hidden="true"></i>
+						<i class="fa fa-camera-retro fa-5x" aria-hidden="true"></i>
+					</aside>
 				</div>
 				<div class="col-md-6 col-sm-12">
-					<img src="img/me-in-suit.png" alt="astronaught" class="img-fluid pull-sm-right hidden-md-down">
+					<img src="img/me-in-suit.png" alt="astronaught" class="img-fluid pull-sm-right hidden-lg-down">
 				</div>	
 			</div> <!-- #about -->
 		</div> <!-- row -->
@@ -401,7 +389,7 @@
 	<div class="container-fluid text-xs-center" id="contact-form">
 		<div class="row">
 			<div class="col-md-12">
-				<h3>Contact Me</h3>
+				<h3 class="display-4">Contact Me</h3>
 				<p class="font-italic"><small>If you would like to inquire about hiring me or just want to chat fill out this form!</small></p>
 
 				<form class="inline-form" action="mailer.php">
@@ -413,10 +401,7 @@
 						<input id="userEmail" type="email" name="email" required>
 
 					</div>
-<!-- 					<div class="form-group">
-						<label class="control-label" for="website">Your website:</label>
-						<input id="userWebsite" type="text" name="website">						
-					</div> -->
+
 					<div class="form-group required">
 						<label class="control-label" for="message">Message:</label>
 						<textarea id="userMsg" name="message"></textarea>
@@ -427,7 +412,6 @@
 
 					<div id="form-messages"></div>
 				</form> <!-- contact-form -->
-
 			</div>
 
 		</div> <!-- row -->
@@ -437,17 +421,30 @@
 
 <!-- FOOTER -->
 	<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 text-xs-center">
-				<p class="lead">&copy; 2016 Christopher Lacaille</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-xs-center">
+					<p class="lead">&copy; 2016 Christopher Lacaille</p>
+
+				</div>
 			</div>
-			<div class="col-md-6 text-xs-center">
-				<!-- <a id="to-top" href="#navbar-header">Back to Top</a> -->
-				<p class="lead">chrislacaille5@gmail.com</p>
+			<hr>
+			<div class="row">
+				<div class="col-md-12 text-xs-center">
+			        <a href="mailto:chrislacaille5@gmail.com" target="_top">chrislacaille5@gmail.com</a><br>
+			        <p class="display-5"><a href="resume.pdf" target="_blank">View Resume</a></p>
+		       </div>
+				<div class="col-md-12">
+					<ul id="social-list" class="list-group text-xs-center">
+						<li><a href="https://github.com/ChrisL108"><i class="fa fa-github-square fa-2x"></i></a></li>
+				        <li><a href="https://twitter.com/chrislacaille5"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+				        <li><a href="https://www.linkedin.com/in/christopher-lacaille-752bb789?trk=nav_responsive_tab_profile"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+				        <li><a href="https://www.facebook.com/clacaille1"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+					</ul>
+				</div>
+
 			</div>
-		</div>
-	</div>	
+		</div>	
 	</footer>
 
 

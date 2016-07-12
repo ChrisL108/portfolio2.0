@@ -5,35 +5,9 @@ html, body {
 	font-family: 'Open Sans', sans-serif;
 	/*font-family: 'PT Serif', serif;*/
 }
-nav {
-	margin: 0;
-	padding: 0;
-}
-nav a {
-	color: #eceeef;
-}
-a:hover, a:active, a:visited, a:focus {
-	color:rgba(224, 224, 224, 0.62);
-}
-.navbar {
-    border-radius: 0;
-    position: relative;
-}
+/*a:hover, a:active, a:visited, a:focus {
 
- /* Navbar collapsable-content button */
-.navbar-toggler {
-	border: 1px solid #A6AFB9;
-	margin-top: .8rem;
-}
-.navbar-toggler:hover {
-	border: 1.5px solid gray;
-	color:gray;
-}
-/* Logo */
-.navbar-brand {
-	position: relative;
-	margin: 0 auto;
-}
+}*/
 
 /* Jumbotron */
 .jumbotron {
@@ -42,8 +16,8 @@ a:hover, a:active, a:visited, a:focus {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position:50% 8%;
-	height: 648px;
-    height: 40.5rem;
+	height: 904px;
+    height: 56.5rem;
 	width: 100%;
 	margin-bottom: 0;
 	border-bottom: 2px solid #4E4E4E;
@@ -75,10 +49,6 @@ a#work-link:hover {
     border: 1px solid #9ee4e4;
 }
 
-a:hover, a:active, a:visited {
-	text-decoration: none;
-	color: none;
-}
 #astronaut {
 	position: absolute;
 	top: 200px;
@@ -118,7 +88,7 @@ a:hover, a:active, a:visited {
 /* ~~~~~ABOUT~~~~ */
 #about {
 	padding: 5rem;
-	height: 41rem;
+	height: 51rem;
 	background-image: url(../img/img-noise.png);
 	background-repeat: repeat;
 	background-attachment: fixed;
@@ -128,19 +98,23 @@ a:hover, a:active, a:visited {
 }
 #about img {
 	position: relative;
-	height: 35rem;
+	height: 45rem;
 	
 }
 #about #about_text {
-	color: white;
-}
-#about h1#about_text2 {
-    text-shadow: 5px 5px 6px #000000;
+    text-shadow: 1px 2px 11px #000000;
     border-left: 4px solid black;
     padding-left: 1rem;
-    line-height: 5rem;
+    color: #a7a7a7;
+    font-size: 2.5rem;
 }
-
+#about aside {
+	margin-top: 3rem;
+}
+#about i {
+	color: gray;
+	padding-right: 3.5rem;
+}
 /*~~~~ RECENT WORK*/
 #recent-work-heading {
     color: #09101c;
@@ -250,14 +224,25 @@ h1.modal-title {
 #contact-form {
     background-image: radial-gradient( #50575c, #2d4e5a);
     color: #b1ffff;
-    padding: 2rem;
+	height: 45rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
 }
+/*title*/
+#contact-form h3 {
+	border-bottom: 2px solid gray;
+	padding-bottom: 3rem;
+}
+/*sub-title*/
 #contact-form p {
 	color: white;
-	padding: 0.5rem;
+	padding: 1.5rem;
 }
 #contact-form label {
-	padding: 0.7rem;
+	padding: 1rem;
 }
 #contact-form input {
     background-color: #37424c;
@@ -273,12 +258,34 @@ h1.modal-title {
     content: "*";
 }
 
+#social-list li {
+	align-self: center;
+	list-style: none;
+	display: inline-flex;
+	padding: .75rem .50rem;
+}
+#social-list li a {
+	color: gray;
+}
+#social-list li a:hover {
+	color: black;
+}
 
 footer {
-    border: 5px inset dimgray;
-    background-color: #bff0ff;
+    background-color: #282828;
     padding: 1rem;
 }
+footer a, footer p {
+	color: gray;
+	text-decoration: none;
+	font-size: 1.3rem;
+	padding: 1rem;
+}
+footer a:hover {
+	text-decoration: none;
+	color: cornflowerblue;
+}
+
 textarea {
     resize: vertical;
     color: gray;
@@ -349,21 +356,11 @@ textarea {
  Small devices (landscape phones, 34em and up)
  */
 
-/* 34em = 544px & downb*/
+/* 34em = 544px & downn*/
 @media (max-width: 35.9em) { 	
 	#recent-work-heading h1 {
 		font-size: 2.5rem;
 		padding: 2rem 0 0 0;
-	}
-	#about {
-		padding: 2.5rem;
-	}
-	#about h1 {
-		font-size: 3rem;
-	}
-	#about h1#about_text2 {
-	    border-left: none; 
-	    padding: 1rem 0 0 0;
 	}
 
 }
@@ -392,15 +389,16 @@ textarea {
 
 /*Large devices (desktops, 62em and up)*/
 /* 62rem = 992px & up */
-@media (min-width: 62em) { 	
-
+@media (min-width: 73em) { 	
+	#about i {
+		padding-top:2rem; 
+	}
+	#about h5 {
+		line-height:3rem; 
+	}
 }
 /* 74rem = 1184px & down*/
 @media (max-width: 74em) and (min-width: 62em) { 	
-	#about img {
-	    height: 28rem;
-	    margin-top: 7rem;
-	}
 	.jumbotron h1 {
 		font-size: 4rem;
 	}
