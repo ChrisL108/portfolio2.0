@@ -88,6 +88,7 @@ a#work-link:hover {
 /* ~~~~~ABOUT~~~~ */
 #about {
 	padding: 5rem;
+	height: 816px; 
 	height: 51rem;
 	background-image: url(../img/img-noise.png);
 	background-repeat: repeat;
@@ -98,6 +99,7 @@ a#work-link:hover {
 }
 #about img {
 	position: relative;
+	height: 720px;
 	height: 45rem;
 	
 }
