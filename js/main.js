@@ -52,7 +52,7 @@ smoothScroll =  function() {
 				}
 		}
 	});
-}
+};
 smoothScroll();
 
 
