@@ -24,7 +24,7 @@ var contactForm = $('form'),
 // jumbotron 'typed' animated text
 	$("#site-title").typed({
 		strings: ["My name is <span class='text-primary'>Chris LaCaille</span>",
-				  "I <span class='text-primary'>design</span> websites... ^600 and <span class='text-primary'>build</span> them",
+				  "I <span class='text-primary'>build</span> websites... ^600 and <span class='text-primary'>apps</span>",
 				  "Check out my work!<br><a id='work-link' href='#recent-work-heading' class='btn btn-lg'>Click Here</a>"
 				  ],
 		typeSpeed: 11,
