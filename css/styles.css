@@ -98,10 +98,11 @@ a#work-link:hover {
     overflow: hidden;
 }
 #about img {
-	position: relative;
-	height: 720px;
-	height: 45rem;
-	
+    position: relative;
+    /* height: 720px; */
+    /* height: 45rem; */
+    height: auto;
+    width: 100%;
 }
 /*#about img {
 	height: 592px;
