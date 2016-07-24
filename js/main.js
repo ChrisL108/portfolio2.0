@@ -76,8 +76,8 @@ $(function() {
 		} else {
 			TweenLite.to(astronaut, 1.2, 
 						{ left:xp, top:yp, opacity: 0  });
-			}
-		}, 100);
+		}
+	}, 100);
 
 // hide 'about' text that will fade in on scroll()
 	$about_text.hide();
@@ -86,7 +86,7 @@ $(function() {
 		if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
 			$about_text.fadeIn(1000, function() {
 				$about_text2.fadeIn(2000);
-		});
+			});
 		} 
 	});
 
