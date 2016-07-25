@@ -135,8 +135,11 @@ a#work-link:hover {
     outline: 1px inset white;
 
 }
+/*Large projects heading*/
 #recent-work-heading h1 {
-	padding: .8rem 6rem;
+    padding: .8rem 6rem;
+    position: relative;
+    left: -2000px;
 }
 #recent-work-heading p {
 	line-height: 0;

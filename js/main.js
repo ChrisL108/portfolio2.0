@@ -77,12 +77,18 @@ $(function() {
 
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
+	var $projectHeading = $("#recent-work-heading h1");
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
 			$about_text.fadeIn(1000, function() {
 				$about_text2.fadeIn(2000);
 			});
+		}
+		// Projects heading slide-in
+		if ( $window.scrollTop() > $projectHeading.offset().top / 2) {
+			$projectHeading.animate({left: 0});
+
 		} 
 	});
 
@@ -93,7 +99,6 @@ $(function() {
 	$projectImgs.on("mouseleave", function() {
 		TweenLite.set($(this), {className: "-=contrast150"});
 	});
-
 
 // Contact form - AJAX
 	$("form").on("submit", function(e) {
