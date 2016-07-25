@@ -9,7 +9,7 @@ $(function() {
 		$about_text2 = $("#about_text2"),
 		$projectImgs = $(".project-imgs");
 // Astronaut animation vars
-	var astronaut = $("#astronaut"),
+	var $astronaut = $("#astronaut"),
 		$window = $(window),
 		mouseX = 0,
 		mouseY = 0,
@@ -67,10 +67,10 @@ $(function() {
 		if ( xp > 50 && xp < ($window.width() - 150) && 
 			yp > 0 && yp < 430) 
 		{
-			TweenLite.to(astronaut, 1.5, 
+			TweenLite.to($astronaut, 1.5, 
 						{ left:xp, top:yp, opacity: 1  });
 		} else {
-			TweenLite.to(astronaut, 1.2, 
+			TweenLite.to($astronaut, 1.2, 
 						{ left:xp, top:yp, opacity: 0  });
 		}
 	}, 75);
