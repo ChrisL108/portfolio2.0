@@ -87,7 +87,7 @@ $(function() {
 		}
 		// Projects heading slide-in
 		if ( $window.scrollTop() > $projectHeading.offset().top / 2) {
-			$projectHeading.animate({left: 0});
+			$projectHeading.animate({left: 0}, 1500);
 
 		} 
 	});
