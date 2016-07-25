@@ -11,8 +11,10 @@ $(function() {
 // Astronaut animation
 	var astronaut = $("#astronaut"),
 		$window = $(window),
-		mouseX = 0;
-	var mouseY = 0; var xp = 0; var yp = 0;
+		mouseX = 0,
+		mouseY = 0,
+		xp = 0,
+		yp = 0;
 // Ajax form variables
 	var contactForm = $("form"),
 		userName = $("#userName"),
@@ -44,8 +46,7 @@ $(function() {
 				$target = $target.length && $target || $("[name=" + this.hash.slice(1) +"]");
 				if ($target.length) {
 					var targetOffset = $target.offset().top;
-					$("html,body")
-							.animate({scrollTop: targetOffset}, 1000);
+					$("html,body").animate({scrollTop: targetOffset}, 1000);
 					return false;
 				}
 			}
@@ -66,10 +67,8 @@ $(function() {
 		// Damper on 10 .. can change ... higher is slower
 		xp += (mouseX - xp) / 10;
 		yp += (mouseY - yp) / 10;
-		if ( xp > 50 && 
-			xp < ($window.width() - 150) && 
-			yp > 0 && 
-			yp < 430) 
+		if ( xp > 50 && xp < ($window.width() - 150) && 
+			yp > 0 && yp < 430) 
 		{
 			TweenLite.to(astronaut, 1.5, 
 						{ left:xp, top:yp, opacity: 1  });
@@ -77,7 +76,7 @@ $(function() {
 			TweenLite.to(astronaut, 1.2, 
 						{ left:xp, top:yp, opacity: 0  });
 		}
-	}, 100);
+	}, 75);
 
 // hide 'about' text that will fade in on scroll()
 	$about_text.hide();
