@@ -1,6 +1,7 @@
 /minified
 /img/original
 .htaccess
+sftp-config.json
 
 img/exclude/
 
