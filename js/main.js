@@ -17,9 +17,9 @@ $(function() {
 		yp = 0;
 // Ajax form vars
 	var contactForm = $("form"),
-		userName = $("#userName"),
-		userEmail = $("#userEmail"),
-		userMsg = $("#userMsg"),
+		$userName = $("#userName"),
+		$userEmail = $("#userEmail"),
+		$userMsg = $("#userMsg"),
 		$formMessages = $("#form-messages");
 
 // Smoother scrolling 
@@ -49,7 +49,6 @@ $(function() {
 		callback: function() {
 			$(".typed-cursor").fadeOut();
 		},
-		
 	});
 
 // jumbotron mouse events
@@ -75,7 +74,6 @@ $(function() {
 						{ left:xp, top:yp, opacity: 0  });
 		}
 	}, 75);
-
 
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
@@ -104,17 +102,17 @@ $(function() {
 		$.ajax({
 			url: contactForm.attr("action"),
 			type: "POST",
-			data: {name: userName.val(),
-				email: userEmail.val(),
-				message: userMsg.val()
+			data: {name: $userName.val(),
+				email: $userEmail.val(),
+				message: $userMsg.val()
 		},
 		})
 	.done(function() {
 		console.log("success");
 		$formMessages.html("Message Sent.. Thank You! I'll get back to you ASAP.");
-		userName.val("");
-		userEmail.val("");
-		userMsg.val("");
+		$userName.val("");
+		$userEmail.val("");
+		$userMsg.val("");
 	})
 	.fail(function(data) {
 		console.log("error sending form data...");
