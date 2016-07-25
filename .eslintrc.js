@@ -9,6 +9,7 @@ module.exports = {
             "error",
             "tab"
         ],
+        "no-console": 0,
         // "linebreak-style": [
         //     "error",
         //     "unix"
@@ -21,5 +22,12 @@ module.exports = {
             "error",
             "always"
         ]
-    }
+    },
+    "globals": {
+            //GSAP Globals
+            "TimelineLite" : false,
+            "TimelineMax" : false,
+            "TweenLite" : false,
+            "TweenMax" : false
+        }
 };
