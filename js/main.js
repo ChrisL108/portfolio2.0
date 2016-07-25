@@ -22,23 +22,8 @@ $(function() {
 		userMsg = $("#userMsg"),
 		$formMessages = $("#form-messages");
 
-// jumbotron 'typed' animated text
-	$("#site-title").typed({
-		strings: ["My name is <span class='text-primary'>Chris LaCaille</span>",
-			"I <span class='text-primary'>build</span> websites... ^600 and <span class='text-primary'>apps</span>",
-			"Check out my work!<br><a id='work-link' href='#recent-work-heading' class='btn btn-lg'>Click Here</a>" ],
-		typeSpeed: 11,
-		startDelay: 2000,
-		cursorChar: "loading...",
-		callback: function() {
-			smoothScroll();
-			$(".typed-cursor").fadeOut();
-		},
-		
-	});
-
 // Smoother scrolling 
-	var smoothScroll =  function() {
+	(function smoothScroll() {
 		$("a[href*=#]").click(function() {
 			if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && 
 			location.hostname == this.hostname) {
@@ -51,8 +36,23 @@ $(function() {
 				}
 			}
 		});
-	};
-	smoothScroll();
+	})();
+
+// jumbotron 'typed' animated text
+	$("#site-title").typed({
+		strings: ["My name is <span class='text-primary'>Chris LaCaille</span>",
+			"I <span class='text-primary'>build</span> websites... ^600 and <span class='text-primary'>apps</span>",
+			"Check out my work!<br><a id='work-link' href='#recent-work-heading' class='btn btn-lg'>Click Here</a>" ],
+		typeSpeed: 11,
+		startDelay: 2000,
+		cursorChar: "loading...",
+		callback: function() {
+			$(".typed-cursor").fadeOut();
+		},
+		
+	});
+
+
 
 
 // jumbotron mouse events
@@ -78,9 +78,10 @@ $(function() {
 		}
 	}, 75);
 
-// hide 'about' text that will fade in on scroll()
-	$about_text.hide();
-	$about_text2.hide();
+
+	$about_text.hide(); // hide text to fade in
+	$about_text2.hide(); // hide text to fade in
+	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
 			$about_text.fadeIn(1000, function() {
