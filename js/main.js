@@ -88,7 +88,6 @@ $(function() {
 		// Projects heading slide-in
 		if ( $window.scrollTop() > $projectHeading.offset().top / 2) {
 			$projectHeading.animate({left: 0}, 1500);
-
 		} 
 	});
 
@@ -110,27 +109,27 @@ $(function() {
 			data: {name: $userName.val(),
 				email: $userEmail.val(),
 				message: $userMsg.val()
-		},
+			},
 		})
-	.done(function() {
-		console.log("success");
-		$formMessages.html("Message Sent.. Thank You! I'll get back to you ASAP.");
-		$userName.val("");
-		$userEmail.val("");
-		$userMsg.val("");
-	})
-	.fail(function(data) {
-		console.log("error sending form data...");
-		// Set the message text.
-		if (data.responseText !== "") {
-			$formMessages.html(data.responseText);
-		} else {
-			$formMessages.html("Oops! An error occured and your message could not be sent.");
-		}
-	})
-	.always(function() {
-		console.log("complete");
-	});
+		.done(function() {
+			console.log("success");
+			$formMessages.html("Message Sent.. Thank You! I'll get back to you ASAP.");
+			$userName.val("");
+			$userEmail.val("");
+			$userMsg.val("");
+		})
+		.fail(function(data) {
+			console.log("error sending form data...");
+			// Set the message text.
+			if (data.responseText !== "") {
+				$formMessages.html(data.responseText);
+			} else {
+				$formMessages.html("Oops! An error occured and your message could not be sent.");
+			}
+		})
+		.always(function() {
+			console.log("complete");
+		});
 	
 	}); // END AJAX
 
