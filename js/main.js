@@ -2,20 +2,20 @@
 // ~~ My javascript/jquery code for my portfolio page - chrislacaille.com
 
 $(function() {
-
+	// Jumbotron and #about section vars 
 	var $jumbotron = $(".jumbotron"),
 		$about = $("#about"), 
 		$about_text = $("#about_text"),
 		$about_text2 = $("#about_text2"),
 		$projectImgs = $(".project-imgs");
-// Astronaut animation
+// Astronaut animation vars
 	var astronaut = $("#astronaut"),
 		$window = $(window),
 		mouseX = 0,
 		mouseY = 0,
 		xp = 0,
 		yp = 0;
-// Ajax form variables
+// Ajax form vars
 	var contactForm = $("form"),
 		userName = $("#userName"),
 		userEmail = $("#userEmail"),
@@ -52,21 +52,19 @@ $(function() {
 		
 	});
 
-
-
-
 // jumbotron mouse events
 	$jumbotron.mousemove( function(e) {
 		mouseX = e.pageX ;
 		mouseY = e.pageY - 50; 
 	});
 
-// Loop over astronaut Tween animation
-// setInterval & Tween ( or css() ) is much smoother than animate()
+// Astronaut Tween animation
+// setInterval & Tween ( or css() ) is smoother than animate()
 	setInterval(function(){
 		// Damper on 10 .. can change ... higher is slower
 		xp += (mouseX - xp) / 10;
 		yp += (mouseY - yp) / 10;
+		// Check to see if astronaught is within jumbotron
 		if ( xp > 50 && xp < ($window.width() - 150) && 
 			yp > 0 && yp < 430) 
 		{
@@ -90,7 +88,7 @@ $(function() {
 		} 
 	});
 
-// Project Imgs HOVER
+// Project images hover effect
 	$projectImgs.on("mouseover", function() {
 		TweenLite.set($(this), {className: "+=contrast150"});
 	});
@@ -100,7 +98,6 @@ $(function() {
 
 
 // Contact form - AJAX
-
 	$("form").on("submit", function(e) {
 		e.preventDefault();
 		contactForm.serialize();
@@ -132,12 +129,7 @@ $(function() {
 		console.log("complete");
 	});
 	
-	});
-
-// END AJAX
-
-
-
+	}); // END AJAX
 
 
 });   // end ready())
