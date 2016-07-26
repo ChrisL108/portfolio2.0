@@ -22,8 +22,16 @@ $(function() {
 		$userMsg = $("#userMsg"),
 		$formMessages = $("#form-messages");
 
+	$(window).resize(function() {
+		$jumbotron.css({
+			"height": window.innerHeight,
+			"width": "auto"
+		});
+	});
 // Smoother scrolling 
-	(function smoothScroll() {
+// Not self-executing so it works on dynamic 'click here' button
+// in jumbotron - after typed runs
+	function smoothScroll() {
 		$("a[href*=#]").click(function() {
 			if (location.pathname.replace(/^\//,"") == this.pathname.replace(/^\//,"") && 
 			location.hostname == this.hostname) {
@@ -36,7 +44,8 @@ $(function() {
 				}
 			}
 		});
-	})();
+	}
+	smoothScroll();
 
 // jumbotron 'typed' animated text
 	$("#site-title").typed({
@@ -48,6 +57,7 @@ $(function() {
 		cursorChar: "loading...",
 		callback: function() {
 			$(".typed-cursor").fadeOut();
+			smoothScroll();
 		},
 	});
 
@@ -77,7 +87,7 @@ $(function() {
 
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	var $projectHeading = $("#recent-work-heading h1");
+	var $projectTitles = $(".project-title");
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
@@ -86,8 +96,8 @@ $(function() {
 			});
 		}
 		// Projects heading slide-in
-		if ( $window.scrollTop() > $projectHeading.offset().top / 2) {
-			$projectHeading.animate({left: 0}, 1500);
+		if ( $window.scrollTop() > $projectTitles.offset().top / 2) {
+			$projectTitles.animate({left: 0}, 1500);
 		} 
 	});
 
