@@ -38,7 +38,8 @@ $(function() {
 				var $target = $(this.hash);
 				$target = $target.length && $target || $("[name=" + this.hash.slice(1) +"]");
 				if ($target.length) {
-					var targetOffset = $target.offset().top;
+					var targetOffset = $target.offset().top - 50;
+					$("html,body").stop(true);
 					$("html,body").animate({scrollTop: targetOffset}, 1000);
 					return false;
 				}
@@ -87,7 +88,8 @@ $(function() {
 
 	$about_text.hide(); // hide text to fade in
 	$about_text2.hide(); // hide text to fade in
-	var $projectTitles = $(".project-title");
+	var $navbar = $("nav"),
+		$titleMeta = $(".title-meta");
 	// #about text fade in on scroll
 	$window.on("scroll", function() {
 		if ( $window.scrollTop() > $about.offset().top - ( $about.height() / 1.2 )) {
@@ -96,9 +98,13 @@ $(function() {
 			});
 		}
 		// Projects heading slide-in
-		if ( $window.scrollTop() > $projectTitles.offset().top / 2) {
-			$projectTitles.animate({left: 0}, 1500);
-		} 
+		if ( $window.scrollTop() > 100) {
+			$navbar.removeClass("static-nav").addClass("fixed-nav");
+			$titleMeta.fadeOut();
+		} else {
+			$titleMeta.fadeIn();
+			$navbar.removeClass("fixed-nav").addClass("static-nav");
+		}
 	});
 
 // Project images hover effect
